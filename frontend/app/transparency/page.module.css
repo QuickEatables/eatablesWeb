@@ -1,0 +1,357 @@
+
+
+.main{
+    background-color: fff;
+    background-image: url('/assets/images/transparencyBg.svg');
+    background-size: 700px  280px;
+    background-repeat: no-repeat;
+    background-position: left -1vw;
+    width: 70%;
+    margin: auto;
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    top: 0px;
+
+}
+
+.green{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    background-color:rgba(5, 68, 37, 1);
+    /* border: 2px solid pink; */
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+
+.cookie_main{
+    line-height: 30px;
+    padding: 20px;
+}
+
+.downloadLinkContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.vdownloadLinkContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.empty{
+    height: 10vw;
+    margin-top: 10vw;
+    margin-bottom: 8vw;
+}
+
+
+.h_3, .h_4{
+    font-size: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-align: center;
+
+}
+.h_4{
+    color: black;
+}
+
+
+.stp{
+ 
+    margin-top: -35px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+.downloadLink{
+    background-color: rgba(5, 68, 37, 1);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.downloadLink:hover{
+    background-color: transparent;
+    color: rgba(5, 68, 37, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sectionFour{
+    background-color: fff;
+    margin-top: -10px;
+}
+
+
+.cookieNav_wrapper{
+    border-left: 3px solid rgb(204, 243, 204);
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cookie_main{
+    /* border: 2px solid red; */
+    padding-top: 0px;
+}
+.cookie_nav{
+    /* border: 2px solid red; */
+    width: 80vw;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    margin-left: -3px;
+    padding-left: 20px;
+    border-left: 3px solid transparent;
+    transition: border-left 0.3s ease, color 0.3s ease;
+}
+
+.link:hover{
+    border-left: 3px solid rgb(1, 203, 102);
+}
+
+.link.active{
+    border-left: 3px solid rgb(1, 203, 102);
+}
+
+.link.active:hover{
+    border-left: 3px solid rgb(1, 203, 102);
+}
+
+.cookieNav_wrapper:hover .link.active{
+    border-left: 3px solid transparent;
+}
+
+.cookieNav_wrapper:hover .link.active:hover{
+    border-left: 3px solid rgb(1, 203, 102);
+}
+
+.cookie_wrapper{
+    display: flex;
+    /* border:2px solid red; */
+    padding-top: 10px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1300px){
+
+
+
+
+.h_1,.h_2{
+    font-size: 30px;
+}
+
+.h_3{
+    font-size: 35px;
+    color: black;
+
+}
+
+
+.stp{
+    font-size: 15px;
+    margin-top: -20px;
+}
+  
+    .downloadLinkContainer{
+      justify-content: center;
+      
+    
+        /* border: 2px solid red; */
+    }
+
+
+    .downloadLink{
+        font-size: 10px;
+    }
+
+   
+
+    .empty{
+        margin-top: 10vw;
+        margin-bottom: 15vw;
+    }
+    
+   
+    .footerWrapper{
+        margin-top: 20vw;
+      
+    }
+
+    .cookie_nav{
+        width: 190vw;
+    }
+
+}
+
+.trans_h1{
+    z-index: 3;
+    font-size: 50px;
+    position: relative;
+    /* border: 2px solid red; */
+    padding: 10px;
+    margin-top: -10px;
+    color: white;
+}
+
+
+@media screen and (max-width: 830px){
+
+
+   
+    .h_4{
+        font-size: 45px;
+    }
+
+
+    .main{
+        width: 100%;
+        /* border: 2px solid red; */
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+  
+  
+    .downloadLink{
+        padding: 8px;
+        font-size: 10x;
+        border-radius: 4.5px;
+    }
+
+/*my anchor to the ground , my hope and firm foundation you never let me down*/
+
+
+.sectionFour{
+    background-color: fff;
+    /* border: 2px solid red; */
+
+}
+
+.empty{
+    margin-top: 10vw;
+    margin-bottom: 20vw;
+}
+
+.cookie_wrapper{
+    padding: 20px;
+}
+
+.cookie_wrapper{
+   flex-wrap: wrap;
+}
+
+
+}
+
+@media screen and (max-width: 600px){
+
+    .h_4{
+        font-size: 30px;
+    }
+
+    .empty{
+        /* border: 2px solid red; */
+        margin-bottom: 35vw;
+        margin-top: 15vw;
+        
+    }
+
+    .stp{
+        margin-top: 0.5px;
+    }
+ 
+    
+    .main{
+        background-color: fff;
+        background-image: url('/assets/images/transparencyBg.svg');
+        background-size: 320px  170px;
+        background-repeat: no-repeat;
+        background-position: left 10vw;
+        position: relative;
+        z-index: 1;
+        margin-left: 0px;
+        margin-right: 0px;
+    
+    }
+
+    .trans_h1{
+        z-index: 3;
+        font-size: 30px;
+        position: relative;
+        /* border: 2px solid red; */
+        padding: 10px;
+        margin-top: -10px;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 330px){
+
+    .main{
+        background-color: fff;
+        background-image: url('/assets/images/transparencyBg.svg');
+        background-size:250px  100px;
+        background-repeat: no-repeat;
+        background-position: left 10vw;
+        position: relative;
+        z-index: 1;
+        margin-left: 0px;
+        margin-right: 0px;
+    
+    }
+
+    .trans_h1{
+        z-index: 3;
+        font-size: 25px;
+        position: relative;
+        /* border: 2px solid red; */
+        padding: 10px;
+        margin-top: 10px;
+        color: black;
+    }
+
+    .green{
+        height: 90px;
+    }
+
+        .h_4{
+            font-size: 25px;
+        }
+        .stp{
+            font-size: 8px;
+            margin-top: -10px;
+        }
+
+        .empty{
+            margin-bottom: 60vw;
+        }
+
+.vdownloadLinkContainer{
+   margin-bottom: 30px;
+   /* border: 2px solid red; */
+}
+
+}

@@ -1,0 +1,42 @@
+.embla {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .embla__viewport {
+    overflow: hidden;
+    width: 95%;
+    /* border: 2px solid red; */
+  }
+  
+  .embla__container {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+  }
+  
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%; /* Adjust for full-width slides */
+    min-width: 0;
+
+  }
+  
+  .embla__slide__img {
+    display: block;
+    width: 70vw;
+    height: 30vw;
+  }
+
+  @media screen and (max-width: 830px){
+
+    .embla__slide__img {
+        display: block;
+        width: 85vw;
+        height: 100vw;
+        margin: auto;
+      }
+  }
+  
