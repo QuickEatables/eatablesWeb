@@ -92,11 +92,11 @@ alt="apple icon"
       <picture style={{}}>
           <source 
           media="(max-width: 1300px)" 
-          srcSet="/assets/images/bikeman-mobile.svg"
+          srcSet="/assets/images/bikeman-mobile.png"
         />
         <Image 
           className={styles.sectionOneImage}
-          src="/assets/images/bikeman.svg"
+          src="/assets/images/bikeman.png"
           width={600}
           height={400}
           alt="bikeman"
@@ -127,11 +127,11 @@ alt="apple icon"
           <picture>
             <source
             media="(max-width: 1300px)"
-            srcSet="/assets/images/vorder-mobile.svg"
+            srcSet="/assets/images/vorder-mobile.png"
             />
 
                 <Image
-                src="/assets/images/vorder_fromus.svg"
+                src="/assets/images/vorder_fromus.png"
                 width={500}
                 height={400}
                 className={styles.sell_deliver}
@@ -142,12 +142,12 @@ alt="apple icon"
          <picture>
           <source
           media="(max-width: 1300px)"
-          srcSet="/assets/images/vdeliver_withus-mobile.svg"
+          srcSet="/assets/images/vdeliver_withus-mobile.png"
           />
 
             <Image
             
-            src="/assets/images/deliver_withus.svg"
+            src="/assets/images/vdeliver_withus.png"
             width={500}
             height={400}
             className={styles.sell_deliver2}

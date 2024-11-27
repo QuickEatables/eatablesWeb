@@ -100,7 +100,7 @@ alt="apple icon"
       <picture style={{}}>
           <source 
           media="(max-width: 1300px)" 
-          srcSet="/assets/images/girlWithPhone-mobile.svg"
+          srcSet="/assets/images/girlWithPhone-mobile.png"
         />
         <Image 
           className={styles.sectionOneImage}
@@ -187,7 +187,7 @@ alt="apple icon"
         <div className={styles.sell_deliverContainer}>
          <Image
          
-         src="/assets/images/sell_withus.svg"
+         src="/assets/images/sell_withus.png"
          width={500}
          height={400}
          className={styles.sell_deliver}
@@ -196,7 +196,7 @@ alt="apple icon"
          />
          <Image
          
-         src="/assets/images/deliver_withus.svg"
+         src="/assets/images/vdeliver_withus.png"
          width={500}
          height={400}
          className={styles.sell_deliver2}

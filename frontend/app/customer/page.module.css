@@ -364,13 +364,14 @@
         width: 25vw;
     }
 
-    .sectionOneImage, .sell_deliver , .sell_deliver2{
+    .sectionOneImage{
         width: 50vw;
         height: 30vw;
        /* border: 2px solid red; */
     
     }
-    
+
+
     
     .conv1 {
         position: absolute;
@@ -421,6 +422,13 @@
         background-image: url('/assets/images/bgreen-mobile.svg');
       
     }
+
+    .sell_deliver , .sell_deliver2{
+
+        width: 40vw;
+        height: 25vw;
+    }
+    
     
     
 
@@ -557,6 +565,12 @@
     margin-top: 35vw;
 }
 
+.sell_deliver , .sell_deliver2{
+
+    width: 40vw;
+    height: 25vw;
+}
+
 }
 
 @media screen and (max-width: 600px){
@@ -569,7 +583,7 @@
 
       .sell_deliver, .sell_deliver2{
         width: 70vw;
-        height: 50vw;
+        height: 40vw;
       } 
 
       .sectionThree{
