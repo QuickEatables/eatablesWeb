@@ -120,6 +120,7 @@ alt="apple icon"
           height={250}
           layout="intrinsic"
           className={styles.convMain}
+          alt="convMain"
           />
 
         </div>
@@ -131,6 +132,7 @@ alt="apple icon"
           width={150}
           height={78}
           className={styles.conv1}
+          alt="conv1"
           
           />
           <Image 
@@ -138,6 +140,7 @@ alt="apple icon"
           width={250}
           height={150}
           className = {styles.conv2}
+          alt="conv2"
           />
           <Image 
           src="/assets/images/conv3.svg"
@@ -145,6 +148,7 @@ alt="apple icon"
           height={78}
           layout="intrinsic"
           className = {styles.conv3}
+          alt="conv3"
           />
           <Image 
           src="/assets/images/conv4.svg"
@@ -152,6 +156,7 @@ alt="apple icon"
           height={78}
           layout="intrinsic"
           className = {styles.conv4}
+          alt="conv4"
           />
           <Image 
           src="/assets/images/conv5.svg"
@@ -159,6 +164,7 @@ alt="apple icon"
           height={78}
           layout="intrinsic"
           className = {styles.conv5}
+          alt="conv5"
           />
 
           
@@ -176,6 +182,7 @@ alt="apple icon"
          width={500}
          height={400}
          className={styles.sell_deliver}
+         alt="sell_withus"
          
          />
          <Image
@@ -184,6 +191,7 @@ alt="apple icon"
          width={500}
          height={400}
          className={styles.sell_deliver2}
+         alt="deliver_withus"
          
          />
         </div>

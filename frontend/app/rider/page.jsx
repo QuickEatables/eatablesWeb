@@ -125,6 +125,7 @@ alt="apple icon"
                 width={500}
                 height={400}
                 className={styles.sell_deliver}
+                alt="vorder_fromus"
             />
 
           </picture>
@@ -140,6 +141,7 @@ alt="apple icon"
             width={500}
             height={400}
             className={styles.sell_deliver2}
+            alt="deliver_withus"
             
             />
          </picture>

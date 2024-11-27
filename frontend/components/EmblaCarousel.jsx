@@ -79,7 +79,8 @@ const EmblaCarousel = ({ slides }) => {
         <div className={styles.embla__container}>
           {slides.map((slide, index) => (
             <div className={styles.embla__slide} key={index}>
-              <img src={slide} alt={`Slide ${index + 1}`} className={styles.embla__slide__img} />
+              <img src={slide} alt={`Slide ${index + 1}`} className={styles.embla__slide__img
+              } />
             </div>
           ))}
         </div>
