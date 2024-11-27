@@ -25,7 +25,7 @@ export const Home = () => {
 
   useEffect(()=>{
     const updateSlidesForScreen = () => {
-    if(window.matchMedia("(max-width: 830px)").matches){
+    if(typeof window !== "undefined" && window.matchMedia("(max-width: 830px)").matches){
       setSlides([
         "/assets/images/rcarousel_1-mobile.svg",
         "/assets/images/rcarousel_2-mobile.svg",
@@ -43,10 +43,18 @@ export const Home = () => {
 
     updateSlidesForScreen();
 
-    window.addEventListener('resize', updateSlidesForScreen);
+    if(typeof window !== "undefined"){
+
+      window.addEventListener('resize', updateSlidesForScreen);
+    }
 
     return () => {
-      window.removeEventListener('resize', updateSlidesForScreen);
+
+      if(typeof window !== "undefined"){
+
+        window.removeEventListener('resize', updateSlidesForScreen);
+
+      }
     }
   
 

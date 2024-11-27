@@ -25,7 +25,7 @@ export const Home = () => {
 
   useEffect(()=>{
     const updateSlidesForScreen = () => {
-    if(window.matchMedia("(max-width: 830px)").matches){
+    if(typeof window !== "undefined" && window.matchMedia("(max-width: 830px)").matches){
       setSlides([
         "/assets/images/vcarousel_1-mobile.svg",
         "/assets/images/vcarousel_2-mobile.svg",
@@ -43,10 +43,17 @@ export const Home = () => {
 
     updateSlidesForScreen();
 
-    window.addEventListener('resize', updateSlidesForScreen);
+      if(typeof window !== "undefined"){
+
+        window.addEventListener('resize', updateSlidesForScreen);
+      }
 
     return () => {
-      window.removeEventListener('resize', updateSlidesForScreen);
+
+      if(typeof window !== "undefined"){
+        window.removeEventListener('resize', updateSlidesForScreen);
+
+      }
     }
   
 
@@ -125,6 +132,7 @@ alt="apple icon"
                 width={500}
                 height={400}
                 className={styles.sell_deliver}
+                alt="sell_deliver"
             />
 
           </picture>
@@ -140,6 +148,7 @@ alt="apple icon"
             width={500}
             height={400}
             className={styles.sell_deliver2}
+            alt="deliver_withus"
             
             />
          </picture>

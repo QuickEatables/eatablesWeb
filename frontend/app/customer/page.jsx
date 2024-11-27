@@ -33,7 +33,7 @@ export const Home = () => {
 
   useEffect(()=>{
     const updateSlidesForScreen = () => {
-    if(window.matchMedia("(max-width: 830px)").matches){
+    if(typeof window !== "undefined" && window.matchMedia("(max-width: 830px)").matches){
       setSlides([
         "/assets/images/carousel_1-mobile.svg",
         "/assets/images/carousel_2-mobile.svg",
@@ -50,11 +50,19 @@ export const Home = () => {
     };
 
     updateSlidesForScreen();
+    if(typeof window !== "undefined"){
+      window.addEventListener('resize', updateSlidesForScreen);
 
-    window.addEventListener('resize', updateSlidesForScreen);
+    }
 
     return () => {
-      window.removeEventListener('resize', updateSlidesForScreen);
+
+      if(typeof window !== "undefined"){
+        
+
+        window.removeEventListener('resize', updateSlidesForScreen);
+
+      }
     }
   
 
