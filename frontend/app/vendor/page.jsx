@@ -8,8 +8,6 @@ import Link from 'next/link';
 import useScrollReveal from '@components/useScrollReveal';
 import EmblaCarousel from '@components/EmblaCarousel'
 import {useState, useEffect} from 'react';
-import vopen from '@components/assets/images/vopen.svg';
-import vopenMobile from '@components/assets/images/vopen-mobile.svg'
 
 export const Home = () => {
 
@@ -96,8 +94,8 @@ alt="apple icon"
           srcSet="/assets/images/vopen-mobile.svg"
         />
         <Image 
-          className="/assets/images/vopen.svg"
-          src={vopen}
+          className={styles.sectionOneImage}
+          src="/assets/images/vopen.svg"
           width={600}
           height={400}
           alt="girl with phone"
