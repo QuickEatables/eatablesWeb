@@ -63,6 +63,11 @@ export const Home = () => {
 
   return (
     <div className={styles.main}>
+
+    <div className={styles.doodle}> 
+
+
+
       <Nav />
       <section className={styles.sectionOne}>
       <div className={styles.sectionOneLeftItem}>
@@ -131,7 +136,7 @@ alt="apple icon"
                 <Image
                 src="/assets/images/vorder_fromus.png"
                 width={500}
-                height={400}
+                height={350}
                 className={styles.sell_deliver}
                 alt="vorder_fromus"
             />
@@ -147,7 +152,7 @@ alt="apple icon"
             
             src="/assets/images/vdeliver_withus.png"
             width={500}
-            height={400}
+            height={350}
             className={styles.sell_deliver2}
             alt="deliver_withus"
             
@@ -175,6 +180,7 @@ alt="apple icon"
           
 
       </section>
+    </div>
 
       <section className={
         styles.sectionFour

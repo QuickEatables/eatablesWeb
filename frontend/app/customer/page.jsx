@@ -71,6 +71,10 @@ export const Home = () => {
 
   return (
     <div className={styles.main}>
+
+      <div className={styles.doodle}> 
+
+
       <Nav />
       <section className={styles.sectionOne}>
       <div className={styles.sectionOneLeftItem}>
@@ -117,6 +121,8 @@ alt="apple icon"
 
       </section>
 
+      </div>
+
       <section className={styles.sectionTwo}>
 
         <h1  className={styles.h_1}> Convenience in One app</h1>
@@ -132,6 +138,8 @@ alt="apple icon"
           />
 
         </div>
+
+
         <div className={styles.convImages}>
          
           <Image 
@@ -178,30 +186,41 @@ alt="apple icon"
           
         </div>
       </section>
+     
 
       <section className={styles.sectionThree}>
         <h2 className={styles.h_2}>
           Join Eatables and expand your reach
         </h2>
         <div className={styles.sell_deliverContainer}>
+
+          <div >
+
+
          <Image
          
          src="/assets/images/sell_withus.png"
          width={500}
-         height={400}
+         height={350}
          className={styles.sell_deliver}
          alt="sell_withus"
          
          />
+          </div>
+
+         <div >
+
+
          <Image
          
          src="/assets/images/vdeliver_withus.png"
          width={500}
-         height={400}
+         height={350}
          className={styles.sell_deliver2}
          alt="deliver_withus"
          
          />
+         </div>
         </div>
 
         <h2

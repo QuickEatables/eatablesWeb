@@ -14,24 +14,23 @@
 
 .main{
     background-color: fff;
-    background-image: url('/assets/images/doodleBg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 70%;
     margin: auto;
-    padding: 20px 20px 0 20px;
     overflow: hidden;
 
 }
 
-
+.doodle{
+    background-image: url('/assets/images/doodleBg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 2px solid red; */
+}
 .sectionOne{
     height: auto;
-    /* border: 2px solid red; */
+  
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
     /* border: 2px solid red; */
 }
 .sectionOneImage {
@@ -230,9 +229,10 @@
     background-image: url('/assets/images/bgreen.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -68vw;
+    background-position: center -95vw;
     border-top: 2px solid rgba(5, 68, 37, 1);
     margin-top: -10px;
+    /* border: 2px solid red; */
 }
 
 

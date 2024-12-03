@@ -14,14 +14,17 @@
 
 .main{
     background-color: fff;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.doodle{
     background-image: url('/assets/images/doodleBg.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 70%;
-    margin: auto;
-    padding: 20px 20px 0 20px;
-    overflow: hidden;
-
+    background-position: center -15vw;
+    /* border: 2px solid red; */
 }
 
 .sectionOne{
@@ -29,8 +32,8 @@
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
+    flex-wrap: wrap;
     /* border: 2px solid red; */
 }
 .sectionOneImage {
@@ -58,7 +61,7 @@
 
 .sectionTwo{
     background-color: rgba(5, 68, 37, 1);
-    /* border: 2px solid pink; */
+    /* border: 2px solid red; */
     text-align: center;
     height: inherit;
     position: relative;
@@ -103,8 +106,8 @@
     position: absolute;
     top: 0;
     margin: auto;
-    left: 0;
-    right: 0;
+    left: 14vw;
+    right: 13.5vw;
     bottom: 0;
     height: inherit;
 }
@@ -211,9 +214,11 @@
     background-image: url('/assets/images/bgreen.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -68vw;
+    background-position: center -95vw;
     border-top: 2px solid rgba(5, 68, 37, 1);
     margin-top: -10px;
+    /* border: 2px solid red; */
+    margin-bottom: 50px;
 }
 
 
@@ -225,7 +230,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     /* border: 2px solid red; */
-    gap: 30px;
+    gap: 50px;
 }
 
 .partners{
@@ -285,7 +290,8 @@
 }
 
 .carouselContainer{
-    margin-top: 95px;
+    margin-top: 170px;
+    /* border: 2px solid maroon; */
 
 }
 
@@ -299,7 +305,6 @@
     .sectionOne{
         /* border: 2px solid red; */
         display: flex;
-        flex-direction: column;
         justify-content: center;
         text-align: center;
         align-items: center;
@@ -308,7 +313,7 @@
     }
 
     .sectionOneLeftItem{
-        text-align: center;
+        /* text-align: center; */
         /* border: 2px solid green; */
         margin-top: 0px;
         width: 90%;
@@ -365,8 +370,8 @@
     }
 
     .sectionOneImage{
-        width: 50vw;
-        height: 30vw;
+        width: 400px;
+        height: 250px
        /* border: 2px solid red; */
     
     }
@@ -425,8 +430,9 @@
 
     .sell_deliver , .sell_deliver2{
 
-        width: 40vw;
-        height: 25vw;
+        /* width: 40vw;
+        height: 30vw; */
+        /* border: 2px solid red; */
     }
     
     
@@ -466,6 +472,10 @@
     
     }
     
+    .convImages{
+        left: 20px;
+        right: 20px;
+    }
 
     .conv1 {
         position: absolute;
@@ -538,7 +548,7 @@
     background-image: url('/assets/images/bgreen.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -110vw;
+    background-position: center -100vw;
     /* border: 2px solid red; */
 
 }
@@ -568,7 +578,7 @@
 .sell_deliver , .sell_deliver2{
 
     width: 40vw;
-    height: 25vw;
+    height: 23vw;
 }
 
 }
@@ -619,5 +629,11 @@
             font-size: 8px;
             margin-top: -10px;
         }
+
+           
+    .convImages{
+        left: 10px;
+        right: 10px;
+    }
 
 }

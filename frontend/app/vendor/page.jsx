@@ -62,8 +62,15 @@ export const Home = () => {
 
   return (
     <div className={styles.main}>
+
+  <div className={styles.doodle}>
       <Nav />
+
+      
+
       <section className={styles.sectionOne}>
+
+       
       <div className={styles.sectionOneLeftItem}>
      <h1 className={styles.headOrder}>Grow your business </h1>
       <p className={styles.headBody}>Connect with hungry customers craving your culinary delights.</p>
@@ -99,9 +106,6 @@ alt="apple icon"
           width={600}
           height={400}
           alt="girl with phone"
-          // sizes="(max-width: 768px) 100vw,
-          //  (max-width: 1200px) 50vw,
-          //  33vw"
   
         />
     </picture>
@@ -115,6 +119,7 @@ alt="apple icon"
           </div>
         
       </section>
+      </div>
 
       <section className={styles.sectionThree}>
         <h2 className={styles.h_2}>
@@ -130,7 +135,7 @@ alt="apple icon"
                 <Image
                 src="/assets/images/vorder_fromus.png"
                 width={500}
-                height={400}
+                height={350}
                 className={styles.sell_deliver}
                 alt="sell_deliver"
             />
@@ -146,7 +151,7 @@ alt="apple icon"
             
             src="/assets/images/vdeliver_withus.png"
             width={500}
-            height={400}
+            height={350}
             className={styles.sell_deliver2}
             alt="deliver_withus"
             
