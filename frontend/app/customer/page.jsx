@@ -21,29 +21,32 @@ export const Home = () => {
     `.${styles.sectionOneImage}`,
     `.${styles.sell_deliver}`,
     `.${styles.sell_deliver2}`,
+    `.${styles.gwp_right}`,
+    `.${styles.gwp_left}`,
     
          
   ]);
 
   const [slides, setSlides] = useState([
-    "/assets/images/carousel_1.svg",
-    "/assets/images/carousel_2.svg",
-    "/assets/images/carousel_3.svg", 
+    { image1:  "/assets/images/phone1.svg", image2: "/assets/images/phone1_msg.svg" },
+    { image1:  "/assets/images/phone2.svg", image2: "/assets/images/phone2_msg.svg" },
+    { image1:  "/assets/images/phone3.svg", image2: "/assets/images/phone3_msg.svg" },  
   ]);
 
   useEffect(()=>{
     const updateSlidesForScreen = () => {
     if(typeof window !== "undefined" && window.matchMedia("(max-width: 830px)").matches){
       setSlides([
-        "/assets/images/carousel_1-mobile.svg",
-        "/assets/images/carousel_2-mobile.svg",
-        "/assets/images/carousel_3-mobile.svg", 
+        { image1:  "/assets/images/phone1.svg", image2: "/assets/images/phone1_msg.svg" },
+        { image1:  "/assets/images/phone2.svg", image2: "/assets/images/phone2_msg.svg" },
+        { image1:  "/assets/images/phone3.svg", image2: "/assets/images/phone3_msg.svg" },  
+      
       ]);
     } else {
       setSlides([
-        "/assets/images/carousel_1.svg",
-        "/assets/images/carousel_2.svg",
-        "/assets/images/carousel_3.svg", 
+        { image1:  "/assets/images/phone1.svg", image2: "/assets/images/phone1_msg.svg" },
+        { image1:  "/assets/images/phone2.svg", image2: "/assets/images/phone2_msg.svg" },
+        { image1:  "/assets/images/phone3.svg", image2: "/assets/images/phone3_msg.svg" }, 
       ]);
     }
 
@@ -79,7 +82,7 @@ export const Home = () => {
       <section className={styles.sectionOne}>
       <div className={styles.sectionOneLeftItem}>
      <h1 className={styles.headOrder}>Order with Eatables</h1>
-      <p className={styles.headBody}>When you are too occupied, tired or feeling lazy, we are one click away.</p>
+      <p className={styles.headBody}>When you are too occupied, tired or <br/> feeling lazy, we are one click away.</p>
 
       <div className={styles.downloadLinkContainer}>
 
@@ -100,24 +103,42 @@ alt="apple icon"
 </div>
       </div>
 
+      
+  
+      <div className={styles.gwp_container}>
+
 
       <picture style={{}}>
           <source 
-          media="(max-width: 1300px)" 
+          media="(max-width: 830px)" 
           srcSet="/assets/images/girlWithPhone-mobile.png"
         />
         <Image 
           className={styles.sectionOneImage}
-          src="/assets/images/girlWithPhone.png"
-          width={600}
-          height={400}
+          src="/assets/images/gwp_main.png"
+          width={750}
+          height={500}
           alt="girl with phone"
-          // sizes="(max-width: 768px) 100vw,
-          //  (max-width: 1200px) 50vw,
-          //  33vw"
+
           
         />
     </picture>
+
+    <Image 
+    className={styles.gwp_right}
+    src="/assets/images/gwp_right.svg"
+    width={200}
+    height={200}
+    alt="gwp_right"
+    />
+    <Image 
+    className={styles.gwp_left}
+    src="/assets/images/gwp_left.svg"
+    width={200}
+    height={200}
+    alt="gwp_left"
+    />
+      </div>
 
       </section>
 
@@ -252,7 +273,7 @@ alt="apple icon"
         > Bringing convenience to you</h2>
         <p className={styles.stp}> We have partnered with stores around you.</p>
 
-
+   { /*
         <div className={styles.partnersContainer}>
           <p className={styles.partners}> GGM Farms </p>
           <p className={styles.partners}> LeoMart </p><p className={styles.partners}> Chop Beta with Johnny & Neighbours </p><p className={styles.partners}> Ido's Kitchen </p><p className={styles.partners}> Obatext Shawarma </p><p className={styles.partners}> Foodby_BB </p><p className={styles.partners}> Shugas Confectionery </p><p className={styles.partners}> Pryme Chaw </p><p className={styles.partners}> AZSeasos Restaurants </p><p className={styles.partners}> Choicey Treats </p>
@@ -260,6 +281,27 @@ alt="apple icon"
           <p className={styles.partners}> Hangover Wine Store</p> 
           <p className={styles.partners}> Chat n Chew</p> 
         </div>
+*/}
+
+    <div  className={styles.partners_imgContainer}>
+        <picture>
+
+        <source 
+          media="(max-width: 830px)" 
+          srcSet="/assets/images/partners-mobile.svg"
+        />
+
+      <Image
+        className={styles.partners_img}
+        src="/assets/images/partners.svg"
+        alt="partners"
+        width={100}
+        height={200}
+      />
+
+        </picture>
+      
+    </div>
 
           
 
@@ -278,12 +320,13 @@ alt="apple icon"
           />
           </div> */}
           <div className={styles.empty}>
-
+            
+            <EmblaCarousel slides={slides} />
 
           </div>
-          <div className={styles.carouselContainer}>
-          <EmblaCarousel slides={slides} />
-          </div>
+          {/* <div className={styles.carouselContainer}> */}
+         
+          {/* </div> */}
 
       </section>
       

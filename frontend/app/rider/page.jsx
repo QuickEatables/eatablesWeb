@@ -3,6 +3,7 @@ import '@styles/globals.css';
 import Image from 'next/image';
 import Nav from '@components/Nav';
 import styles from './page.module.css';
+import styles2 from '../customer/page.module.css';
 import Footer from '@components/Footer'
 import Link from 'next/link';
 import useScrollReveal from '@components/useScrollReveal';
@@ -12,30 +13,32 @@ import {useState, useEffect} from 'react';
 export const Home = () => {
 
   useScrollReveal([
-    `.${styles.sectionOneImage}`,
+    `.${styles2.sectionOneImage}`,
     `.${styles.sell_deliver}`,
-    `.${styles.sell_deliver2}`,   
+    `.${styles.sell_deliver2}`,
+    `.${styles2.gwp_right}`, 
+    `.${styles2.gwp_left}`,  
   ]);
 
   const [slides, setSlides] = useState([
-    "/assets/images/rcarousel_1.svg",
-    "/assets/images/rcarousel_2.svg",
-    "/assets/images/rcarousel_3.svg", 
+    { image1:  "/assets/images/rphone1.svg", image2: "/assets/images/rphone1_msg.svg" },
+    { image1:  "/assets/images/rphone2.svg", image2: "/assets/images/rphone2_msg.svg" },
+    { image1:  "/assets/images/rphone3.svg", image2: "/assets/images/rphone3_msg.svg" },  
   ]);
 
   useEffect(()=>{
     const updateSlidesForScreen = () => {
     if(typeof window !== "undefined" && window.matchMedia("(max-width: 830px)").matches){
       setSlides([
-        "/assets/images/rcarousel_1-mobile.svg",
-        "/assets/images/rcarousel_2-mobile.svg",
-        "/assets/images/rcarousel_3-mobile.svg", 
+        { image1:  "/assets/images/rphone1.svg", image2: "/assets/images/rphone1_msg.svg" },
+        { image1:  "/assets/images/rphone2.svg", image2: "/assets/images/rphone2_msg.svg" },
+        { image1:  "/assets/images/rphone3.svg", image2: "/assets/images/rphone3_msg.svg" }, 
       ]);
     } else {
       setSlides([
-        "/assets/images/rcarousel_1.svg",
-        "/assets/images/rcarousel_2.svg",
-        "/assets/images/rcarousel_3.svg", 
+        { image1:  "/assets/images/rphone1.svg", image2: "/assets/images/rphone1_msg.svg" },
+        { image1:  "/assets/images/rphone2.svg", image2: "/assets/images/rphone2_msg.svg" },
+        { image1:  "/assets/images/rphone3.svg", image2: "/assets/images/rphone3_msg.svg" }, 
       ]);
     }
 
@@ -43,15 +46,14 @@ export const Home = () => {
 
     updateSlidesForScreen();
 
-    if(typeof window !== "undefined"){
+      if(typeof window !== "undefined"){
 
-      window.addEventListener('resize', updateSlidesForScreen);
-    }
+        window.addEventListener('resize', updateSlidesForScreen);
+      }
 
     return () => {
 
       if(typeof window !== "undefined"){
-
         window.removeEventListener('resize', updateSlidesForScreen);
 
       }
@@ -64,19 +66,25 @@ export const Home = () => {
   return (
     <div className={styles.main}>
 
-    <div className={styles.doodle}> 
-
-
-
+  <div className={styles.doodle}>
       <Nav />
-      <section className={styles.sectionOne}>
-      <div className={styles.sectionOneLeftItem}>
-     <h1 className={styles.headOrder}>Deliver and Earn</h1>
-      <p className={styles.headBody}>Become a rider with Eatables and start earning today!</p>
 
-      <div className={styles.downloadLinkContainer}>
+      
 
-<Link className={styles.downloadLink}
+      <section className={styles2.sectionOne}>
+
+       
+      <div className={styles2.sectionOneLeftItem}>
+     <h1 className={styles.headOrder}
+     
+     >Deliver and earn </h1>
+      <p className={styles.headBody}
+     
+      >Become a rider with Eatables and start earning today! .</p>
+
+      <div className={styles2.downloadLinkContainer}>
+
+<Link className={styles2.downloadLink}
 href="#"
 ><Image src="assets/images/playstore.svg"
 width={15}
@@ -84,7 +92,7 @@ height={15}
 alt="playstore icon"/> Download on Playstore</Link>
 <Link
 href="#"
-className={styles.downloadLink}
+className={styles2.downloadLink}
 > <Image src="assets/images/apple.svg"
 width={15}
 height={15}
@@ -93,24 +101,39 @@ alt="apple icon"
 </div>
       </div>
 
+      <div className={styles2.gwp_container}>
 
-      <picture style={{}}>
-          <source 
-          media="(max-width: 1300px)" 
-          srcSet="/assets/images/bikeman-mobile.png"
+        <picture style={{}}>
+            <source 
+            media="(max-width: 830px)" 
+            srcSet="/assets/images/bikeman-mobile.png"
+          />
+          <Image 
+            className={styles2.sectionOneImage}
+            src="/assets/images/rider_main.png"
+            width={750}
+            height={500}
+            alt="girl with phone"
+
+            
+          />
+        </picture>
+
+        <Image 
+        className={styles2.gwp_right}
+        src="/assets/images/vopen_right.svg"
+        width={200}
+        height={200}
+        alt="gwp_right"
         />
         <Image 
-          className={styles.sectionOneImage}
-          src="/assets/images/bikeman.png"
-          width={600}
-          height={400}
-          alt="bikeman"
-          // sizes="(max-width: 768px) 100vw,
-          //  (max-width: 1200px) 50vw,
-          //  33vw"
-  
+        className={styles2.gwp_left}
+        src="/assets/images/vopen_left.svg"
+        width={200}
+        height={200}
+        alt="gwp_left"
         />
-    </picture>
+    </div>
 
       </section>
 
@@ -121,9 +144,10 @@ alt="apple icon"
           </div>
         
       </section>
+      </div>
 
       <section className={styles.sectionThree}>
-        <h2 className={styles.h_2}>
+        <h2 className={styles2.h_3} style={{color: 'white', marginTop: '20vw'}}>
           Join Eatables and expand your reach
         </h2>
         <div className={styles.sell_deliverContainer}>
@@ -138,7 +162,7 @@ alt="apple icon"
                 width={500}
                 height={350}
                 className={styles.sell_deliver}
-                alt="vorder_fromus"
+                alt="sell_deliver"
             />
 
           </picture>
@@ -163,24 +187,42 @@ alt="apple icon"
         <br />
         <br />
         <h2
-        className={styles.h_3}
+        className={styles2.h_3}
         style={{color: 'white'}}
         > Bringing convenience to you</h2>
-        <p className={styles.stp} > We have partnered with stores around you.</p>
+        <p className={styles2.stp} > We have partnered with stores around you.</p>
 
 
-        <div className={styles.partnersContainer}>
+        {/* <div className={styles.partnersContainer}>
           <p className={styles.partners}> GGM Farms </p>
           <p className={styles.partners}> LeoMart </p><p className={styles.partners}> Chop Beta with Johnny & Neighbours </p><p className={styles.partners}> Ido's Kitchen </p><p className={styles.partners}> Obatext Shawarma </p><p className={styles.partners}> Foodby_BB </p><p className={styles.partners}> Shugas Confectionery </p><p className={styles.partners}> Pryme Chaw </p><p className={styles.partners}> AZSeasos Restaurants </p><p className={styles.partners}> Choicey Treats </p>
           <p className={styles.partners}> Zinny's Taste </p><p className={styles.partners}> 247 Shawarma </p><p className={styles.partners}> BrishFoods </p><p className={styles.partners}> Yummy Bite Shawarma </p><p className={styles.partners}> JC's Bistro</p><p className={styles.partners}> Duke's Kitchen </p><p className={styles.partners}> Chimama's Kitchen </p><p className={styles.partners}> DD's Fast Food </p><p className={styles.partners}> Sips and Snacks </p><p className={styles.partners}> Exito</p><p className={styles.partners}> Fortune's Meshai Republic</p><p className={styles.partners}> Platter Grillz </p><p className={styles.partners}> Chop Chaw</p>
           <p className={styles.partners}> Hangover Wine Store</p> 
           <p className={styles.partners}> Chat n Chew</p> 
-        </div>
+        </div> */}
 
+<div  className={styles2.partners_imgContainer}>
+        <picture>
+
+        <source 
+          media="(max-width: 830px)" 
+          srcSet="/assets/images/partners-mobile.svg"
+        />
+
+      <Image
+        className={styles2.partners_img}
+        src="/assets/images/partners.svg"
+        alt="partners"
+        width={100}
+        height={200}
+      />
+
+        </picture>
+      
+    </div>
           
 
       </section>
-    </div>
 
       <section className={
         styles.sectionFour
@@ -188,13 +230,14 @@ alt="apple icon"
           <div className={styles.empty}>
 
                 <h2
-              className={styles.h_4}
+              className={styles2.h_3}
+              style={{color: 'black', textAlign: 'center', width:'100%'}}
               > Eatables dey for you</h2>
-              <p className={styles.stp} style={{color: 'black'}}> Stop worrying. Just place your order in seconds</p>
+              <p className={styles2.stp} style={{color: 'black'}}> Stop worrying. Just place your order in seconds</p>
 
               <div className={styles.vdownloadLinkContainer}>
 
-              <Link className={styles.downloadLink}
+              <Link className={styles2.downloadLink}
               href="#"
               ><Image src="assets/images/playstore.svg"
               width={15}
@@ -202,7 +245,7 @@ alt="apple icon"
               alt="playstore icon"/> Download on Playstore</Link>
               <Link
               href="#"
-              className={styles.downloadLink}
+              className={styles2.downloadLink}
               > <Image src="assets/images/apple.svg"
               width={15}
               height={15}

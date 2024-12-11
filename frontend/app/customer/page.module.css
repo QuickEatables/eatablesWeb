@@ -1,15 +1,18 @@
 
 .headOrder{
-    font-size: 64px;
+    /* font-size: 78px; */
+    font-size: 3.8vw;
     /* border: 2px solid red; */
     width: fit-content;
     margin-top: 0px;
 }
 .headBody{
-    font-size: 20px;
-    width: 65%;
+    /* font-size: 20px; */
+    font-size: 2vw;
+  
     /* border: 2px solid pink; */
-    margin-top: -35px;
+    margin-top: -3vw;
+    padding-top: 1vw;
 }
 
 .main{
@@ -19,7 +22,7 @@
 
 }
 
-.doodle{
+.doodle,.empty{
     background-image: url('/assets/images/doodleBg.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,16 +34,36 @@
     height: auto;
     /* border: 2px solid red; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 50px;
     flex-wrap: wrap;
     /* border: 2px solid red; */
 }
-.sectionOneImage {
-    width: 30vw;
-    height: 20vw;
-   /* border: 2px solid red; */
 
+.gwp_container{
+    /* border: 2px solid red; */
+    position: relative;
+}
+.sectionOneImage {
+    width: 40.5vw;
+    height: 27vw;
+   /* border: 2px solid red;*/
+   object-fit: contain;
+
+}
+.gwp_left{
+    left: -5vw;
+    top: 10vw;
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+}
+.gwp_right{
+    position: absolute;
+    right: 0;
+    bottom: 10vw;
+    width: 20vw;
+    height: 20vw;
 }
 
 .downloadLinkContainer{
@@ -77,24 +100,25 @@
     /* border: 2px solid red; */
 }
 .h_2{
-    font-size: 50px;
+    font-size: 3.7vw;
     text-align: center;
     /* border: 2px solid red; */
 }
 
 .h_3{
-    font-size: 50px;
+    font-size: 2.7vw;
     padding-left: 10px;
     padding-right: 10px;
     color: white;
     text-align: center;
+    /* border: 2px solid red; */
 
 }
 
 .stp{
  
-    margin-top: -35px;
-    font-size: 25px;
+    margin-top: -1.5vw;
+    font-size: 1.8vw;
     color: white;
     text-align: center;
     /* border: 2px solid red; */
@@ -158,7 +182,7 @@
 }
 
 
-.convMain, .conv1, .conv2, .conv3, .conv4, .conv5, .sectionOneImage, .sell_deliver, .sell_deliver2 {
+.convMain, .conv1, .conv2, .conv3, .conv4, .conv5, .sectionOneImage, .sell_deliver, .sell_deliver2,.gwp_right, .gwp_left {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -169,8 +193,8 @@
     background-color: rgba(5, 68, 37, 1);
     color: white;
     text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 5px;
     font-size: 12px;
     display: flex;
     justify-content: center;
@@ -199,16 +223,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background-color: rgba(5, 68, 37, 1); */
     background-color: fff;
     background-image: url('/assets/images/bgreen.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: center 13vw; */
     background-position: center 13vw;
-    /* border: 2px solid red; */
+    /* background-position: center 13vw; */
     border-bottom: 1px solid rgba(5, 68, 37, 1);
+    /* clip-path: path('M1448.33 108.5C1448.33 158.758 1103.98 199.5 706.334 199.5C308.689 199.5 -10.1655 158.758 -10.1655 108.5C-28.6655 -2.5 257.835 91.5 1107.83 0C1505.48 0 1448.33 58.2421 1448.33 108.5Z'); */
     
 }
+
 .sectionFour{
     background-color: fff;
     background-image: url('/assets/images/bgreen.svg');
@@ -230,21 +256,43 @@
     justify-content: space-around;
     flex-wrap: wrap;
     /* border: 2px solid red; */
-    gap: 50px;
+    gap: 30px;
 }
 
-.partners{
+/* .sell_deliver , .sell_deliver2{
+    width: 40vw;
+    height: 23vw;
+} */
+
+/* .partners{
     color: white;
     background-color: rgba(255, 255, 255, 0.087);
-   padding: 10px;
-    min-width: 200px;
+    padding: 10px;
+    min-width: fit-content;
     border-radius: 8px;
     border: 1px solid green;
     text-align: center;
     flex: 0 0 auto;
+    font-size: 14px;
+   
     margin-top: -10px;
 
 
+} */
+
+.partners_img{
+    width: auto;
+    height: 20vw;
+    object-fit: contain;
+    display: inline-block;
+    /* border: 2px solid red; */
+}
+
+.partners_imgContainer{
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    /* border: 2px solid white; */
 }
 
 .partnersContainer{
@@ -261,30 +309,31 @@
     right: 0px;
     left: 0px;
     height: 300px;
-    scrollbar-width: 0; 
+    scrollbar-width: 0;
+    width: 100%;
     
    
 }
-.partnersContainer::-webkit-scrollbar {
+.partners_imgContainer::-webkit-scrollbar {
     opacity: 0;
     width: 2px;
     height: 2px;
 }
 
-.partnersContainer::-webkit-scrollbar-thumb {
+.partners_imgContainer::-webkit-scrollbar-thumb {
     background: rgba(5, 68, 37, 1); 
     border-radius: 10px; 
     opacity: 0; 
 }
 
-.partnersContainer::-webkit-scrollbar-track {
+.partners_imgContainer::-webkit-scrollbar-track {
     background: transparent; 
     border-radius: 10px;
 }
 
 
-.partnersContainer:hover::-webkit-scrollbar,
-.partnersContainer:focus::-webkit-scrollbar {
+.partners_imgContainer:hover::-webkit-scrollbar,
+.partners_imgContainer:focus::-webkit-scrollbar {
     opacity: 1; 
     transition: opacity 0.3s; 
 }
@@ -292,86 +341,73 @@
 .carouselContainer{
     margin-top: 170px;
     /* border: 2px solid maroon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
 
 }
 
 .carousel{
-    width: 70vw;
-    height: 30vw;
+   
+}
+.empty{
+    /* border: 2px solid rgb(236, 4, 194); */
+   
 }
 
 @media screen and (max-width: 1300px){
 
     .sectionOne{
-        /* border: 2px solid red; */
-        display: flex;
+        /* border: 2px solid blue; */
+        /* display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         padding-top: 50px;
-        gap: 20px;
+        gap: 20px; */
     }
 
     .sectionOneLeftItem{
         /* text-align: center; */
         /* border: 2px solid green; */
-        margin-top: 0px;
+        /* margin-top: 0px;
         width: 90%;
-        padding-bottom: 35px;
+        padding-bottom: 35px; */
         
     }
  
 
-.headOrder{
-    font-size: 40px;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.h_1,.h_2{
+/* .h_1,.h_2{
     font-size: 30px;
-}
+} */
 
 .h_3{
     font-size: 35px;
     color: white;
 
 }
-.stp{
+/* .stp{
     font-size: 15px;
     margin-top: -20px;
-}
-    .headBody{
-
-        width: 100%;
-    }
-
-    .downloadLinkContainer{
-      justify-content: center;
-      
-    
-        /* border: 2px solid red; */
-    }
-
+} */
+ 
+  
 
     .downloadLink{
         font-size: 10px;
     }
 
-    .headOrder{
-       
-    }
-    .headBody{
-        font-size: 20px;
-    }
 
     .convMain{
         width: 25vw;
     }
 
     .sectionOneImage{
-        width: 400px;
-        height: 250px
+        /* width: 400px;
+        height: 250px */
        /* border: 2px solid red; */
     
     }
@@ -419,9 +455,7 @@
         width: 15vw;
     }
 
-    .sell_deliverContainer{
-        /* flex-direction: column; */
-    }
+    
     .sectionThree{
        
         background-image: url('/assets/images/bgreen-mobile.svg');
@@ -430,10 +464,11 @@
 
     .sell_deliver , .sell_deliver2{
 
-        /* width: 40vw;
-        height: 30vw; */
-        /* border: 2px solid red; */
+        width: 40vw;
+        height: 20vw;
+
     }
+    
     
     
     
@@ -443,33 +478,69 @@
 
 @media screen and (max-width: 830px){
 
+    .gwp_left{
+       display: none;
+    }
+    .gwp_right{
+        display: none;
+    }
+
+    .downloadLinkContainer{
+        justify-content: center;
+        padding-bottom: 20px;
+        
+      
+          /* border: 2px solid red; */
+      }
+      .headBody{
+
+        font-size: 3.3vw;
+        padding-bottom: 5vw;
+        width: 76%;
+        margin: auto;
+        margin-top: -5vw;
+        /* border: 2px solid red; */
+    
+      }
+  
+
 
     .h_1{
-        font-size: 20px;
+        font-size: 5.8vw;
     }
     .h_2{
-        font-size: 30px;
+        font-size: 6.9vw;
+        padding: 3.3vw;
+        /* border: 2px solid red; */
        
 
     }
     .h_3{
-        font-size: 30px;
+        width: 70%;
+        font-size: 6.5vw;
+    }
+    .stp{
+        font-size: 3vw;
     }
 
     .partnersContainer{
 
-        height: 200px;
+        height: 300px;
 
     }
     .convMain{
         width: 40vw;
     }
 
-    .sectionOneImage, .sell_deliver, .sell_deliver2 {
+    .sectionOneImage {
         width: 60vw;
         height: 40vw;
        /* border: 2px solid red; */
     
+    }
+    .sell_deliver, .sell_deliver2{
+        width: 60vw;
+        height: 30vw;
     }
     
     .convImages{
@@ -523,7 +594,7 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-  
+   
      .sectionOneLeftItem{
         text-align: center;
         /* border: 2px solid green; */
@@ -538,24 +609,34 @@
     }
 
 .headOrder{
-    font-size: 50px;
-    width: 100%;
-    padding-bottom: 10px;
+    font-size: 9.6vw;
+    width: 95%;
+    /* border: 2px solid red; */
+   
+    
+
+}
+
+.sectionThree{
+    background-image: url('/assets/images/bgreen-mobile.svg');
+    background-position: center 40vw;
 }
 
 .sectionFour{
     background-color: fff;
-    background-image: url('/assets/images/bgreen.svg');
+    background-image: url('/assets/images/bgreen-mobile.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -100vw;
+    background-position: center -185vw;
     /* border: 2px solid red; */
+    /* background-image: none; */
+  
 
 }
 
-.carousel{margin-top:  50px;
-    width: 85vw;
-    height: 60vw;
+.carousel{
+    margin-top:  50px;
+    
 }
 
 
@@ -563,27 +644,57 @@
     margin-top: 20vw;
     margin-bottom: -25vw;
     /* border-top: 2px solid green; */
-    height: fit-content;
+    height:auto;
     /* padding-bottom: 20px; */
 }
-.empty{
-    /* border: 2px solid red; */
-    height: 10px;
-}
+
 .sectionFive{
     /* border: 2px solid red; */
     margin-top: 35vw;
 }
 
 .sell_deliver , .sell_deliver2{
+    width: 70vw;
+    height: 40vw;
+}
 
-    width: 40vw;
-    height: 23vw;
+.sell_deliverContainer{
+    flex-direction: column;
+}
+
+.partners_img{
+    width: auto;
+    height: 50vw;
+    object-fit: contain;
+    display: inline-block
+    /* border: 2px solid red; */
+}
+.partners_imgContainer{
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    /* border: 2px solid white; */
 }
 
 }
 
 @media screen and (max-width: 600px){
+
+
+    .h_2{
+        /* border: 2px solid red; */
+        padding: 3.3vw;
+    }
+
+    .h_3{
+        /* border: 2px solid red; */
+        width: 80%;
+        font-size: 7.5vw;
+    }
+    .sectionOne{
+        justify-content: center;
+        padding: 5px;
+    }
 
     .sectionOneImage{
         width: 90vw;
@@ -591,44 +702,89 @@
       
       }
 
+
       .sell_deliver, .sell_deliver2{
         width: 70vw;
         height: 40vw;
       } 
 
       .sectionThree{
-       
         background-image: url('/assets/images/bgreen-mobile.svg');
         background-position: center 40vw;
     }
     
+    .sectionOneLeftItem{
+        width: 95vw;
+        /* border: 2px solid orange; */
+      }
+/* .partners{
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 4px;
+    flex-shrink: 0;
+   
+} */
+
+.headOrder{
+    font-size: 9.6vw;
+    width: 80%;
+    /* border: 2px solid red; */
+    margin: auto;
+    
+
+}
+
+.headBody{
+    margin-top: 5vw;
+}
+
 
 
 }
 
 @media screen and (max-width: 330px){
+/* added .downloadLink*/
+    .downloadLink{
+        background-color: rgba(5, 68, 37, 1);
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+    }
 
+    .downloadLinkContainer{
+        gap:5px;
+    }
     .headOrder{
         font-size: 30px;
-        width: 100%;
+        width: 92%;
         padding-bottom: 10px;
     }
+    .headBody{
+
+        font-size: 3.5vw;
+        margin-top: -2vw;
+      }
     
-        .h_1{
+        /* .h_1{
             font-size: 12px;
-        }
-        .h_2{
+        } */
+        /* .h_2{
             font-size: 15px;
     
         }
         .h_3{
             font-size: 15px;
         
-        }
-        .stp{
+        } */
+        /* .stp{
             font-size: 8px;
             margin-top: -10px;
-        }
+        } */
 
            
     .convImages{
