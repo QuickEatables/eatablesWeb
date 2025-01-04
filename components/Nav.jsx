@@ -54,9 +54,9 @@
 
 //     <div className={`${styles.navLink} ${pathname=='/transparency' ? styles.trans_navLink : ''}`}>
 //           <Link
-//             href="/customer"
+//             href="/"
 //             className={`${styles.navItem} ${
-//               pathname === '/customer' ? styles.active : ''
+//               pathname === '/' ? styles.active : ''
 //             }`}
 //           >
 //             Customer
@@ -103,7 +103,7 @@
 
 //                     <div className={styles.mobileFlex}>
 //                     <div className={`${styles.navlist} ${isNavDisplayVisible ? styles.visible : ''}`}>
-//                         <Link className={styles.a}  href="/customer"> Customer </Link>
+//                         <Link className={styles.a}  href="/"> Customer </Link>
 //                         <Link className={styles.a}  href="/vendor" > Vendor </Link>
 //                         <Link className={styles.a}  href="/rider">Rider </Link>
                        
@@ -176,9 +176,9 @@ const Nav = () => {
 
         <div className={`${styles.navLink} ${pathname === '/transparency' ? styles.trans_navLink : ''}`}>
           <Link
-            href="/customer"
+            href="/"
             className={`${styles.navItem} ${
-              pathname === '/customer' ? styles.active : ''
+              pathname === '/' ? styles.active : ''
             }`}
           >
             Customer
@@ -226,7 +226,7 @@ const Nav = () => {
               isNavDisplayVisible ? styles.visible : ''
             }`}
           >
-            <Link className={styles.a} href="/customer">
+            <Link className={styles.a} href="/">
               Customer
             </Link>
             <Link className={styles.a} href="/vendor">

@@ -1,4 +1,6 @@
-
+* {
+  font-family: "Ubuntu", sans-serif;
+}
 
 :root {
     --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;

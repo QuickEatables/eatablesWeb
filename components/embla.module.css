@@ -1,6 +1,7 @@
 .embla {
     overflow: hidden;
     position: relative;
+    font-family: "Ubuntu", sans-serif;
   }
   
   .embla__viewport {

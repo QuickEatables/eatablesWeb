@@ -56,13 +56,19 @@ const EmblaCarousel = ({ slides }) => {
     if (!emblaApi) return;
 
     const onPointerUp = () => {
-      autoplay.play();
+      if (autoplay && autoplay.play) {
+        autoplay.play();
+      }
     };
 
-    emblaApi.on("pointerUp", onPointerUp);
+    if (emblaApi.on) {
+      emblaApi.on("pointerUp", onPointerUp);
+    }
 
     return () => {
-      emblaApi.off("pointerUp", onPointerUp);
+      if (emblaApi.off) {
+        emblaApi.off("pointerUp", onPointerUp);
+      }
     };
   }, [emblaApi, autoplay]);
 

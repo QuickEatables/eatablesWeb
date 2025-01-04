@@ -3,7 +3,7 @@ import '@styles/globals.css';
 import Image from 'next/image';
 import Nav from '@components/Nav';
 import styles from './page.module.css';
-import styles2 from '../customer/page.module.css';
+import styles2 from '../page.module.css';
 import Footer from '@components/Footer'
 import Link from 'next/link';
 import useScrollReveal from '@components/useScrollReveal';
