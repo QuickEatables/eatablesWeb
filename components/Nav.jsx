@@ -171,7 +171,7 @@ const Nav = () => {
             alt="Eatables logo"
             width={150}
             height={100}
-            className={`${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navImage : ''}`}
+            className={`${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navImage : styles.navImage}`}
           /></Link>
         </div>
 

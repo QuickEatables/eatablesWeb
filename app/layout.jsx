@@ -15,7 +15,7 @@ const ubuntu = Ubuntu({
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
-        <body className={ubuntu.className}>
+        <body className={ubuntu.className} style={{margin: '0px'}}>
           <div className="main">
             
           </div>
