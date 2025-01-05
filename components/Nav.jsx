@@ -129,7 +129,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './nav.module.css';
 import { usePathname } from 'next/navigation';
-import { CiMenuFries } from "react-icons/ci";
+import { CiMenuBurger, CiMenuFries } from "react-icons/ci";
 
 const Nav = () => {
   const pathname = usePathname();
@@ -163,18 +163,19 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${pathname === '/transparency' ? styles.greenBg : ''}`}>
+      <nav className={`${styles.nav} ${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.greenBg : ''}`}>
         <div>
+<Link href="/">
           <Image
             src="assets/images/logo.svg"
             alt="Eatables logo"
-            width={100}
+            width={150}
             height={100}
-            className={`${pathname === '/transparency' ? styles.trans_navImage : ''}`}
-          />
+            className={`${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navImage : ''}`}
+          /></Link>
         </div>
 
-        <div className={`${styles.navLink} ${pathname === '/transparency' ? styles.trans_navLink : ''}`}>
+        <div className={`${styles.navLink} ${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navLink : ''}`}>
           <Link
             href="/"
             className={`${styles.navItem} ${
@@ -204,18 +205,19 @@ const Nav = () => {
 
       <nav
         className={`${styles.navmobile} ${
-          pathname === '/transparency' ? styles.trans_navmobile : ''
+          ['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navmobile : ''
         }`}
       >
+<Link href="/">
         <Image
           src="/assets/images/logo-mobile.svg"
           width={40}
           height={40}
           className={styles.image}
           alt="logo-mobile"
-        />
+        /></Link>
         <p onClick={navDisplay} className={styles.navButton}>
-          <CiMenuFries size="30px" />
+          <CiMenuBurger size="30px" color='rgba(5, 68, 37, 1)'/>
         </p>
       </nav>
 

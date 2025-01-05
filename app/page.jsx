@@ -87,13 +87,13 @@ export const Home = () => {
       <div className={styles.downloadLinkContainer}>
 
 <Link className={styles.downloadLink}
-href="#"
+href="https://play.google.com/store/apps/details?id=com.eatables.app"
 ><Image src="assets/images/playstore.svg"
 width={15}
 height={15}
 alt="playstore icon"/> Download on Playstore</Link>
 <Link
-href="#"
+href="https://apps.apple.com/us/app/eatables/id6502586489"
 className={styles.downloadLink}
 > <Image src="assets/images/apple.svg"
 width={15}
@@ -252,13 +252,13 @@ alt="apple icon"
         <div className={styles.downloadLinkContainer}>
 
         <Link className={styles.downloadLink}
-        href="#"
+        href="https://play.google.com/store/apps/details?id=com.eatables.app"
         ><Image src="assets/images/playstore.svg"
         width={15}
         height={15}
         alt="playstore icon"/> Download on Playstore</Link>
         <Link
-        href="#"
+        href="https://apps.apple.com/us/app/eatables/id6502586489"
         className={styles.downloadLink}
         > <Image src="assets/images/apple.svg"
         width={15}

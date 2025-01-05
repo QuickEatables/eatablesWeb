@@ -25,7 +25,7 @@ export const Home = () => {
       
 
       <h1 className={styles.trans_h1}>
-        Transparency
+        Cookie Policy
       </h1>
 
       <div className={styles.cookie_wrapper}>
@@ -36,21 +36,15 @@ export const Home = () => {
 
 
               <Link className={styles.link}
-              href=""
+              href="/terms-of-service"
               > Terms of Service</Link>
               <Link className={styles.link}
-              href=""
+              href="/privacy-policy"
               >Privacy Policy</Link>
-              <Link className={styles.link}
-              href=""
-              >Vendor Agreement</Link>
-              <Link className={styles.link}
-              href=""
-              > Rider Agreement</Link>
               <Link className={`${styles.link} ${
-                    pathname === '/transparency' ? styles.active : ''
+                    pathname === '/cookies' ? styles.active : ''
                   }`}
-              href="/transparency"
+              href="/cookies"
               > Cookie Policy</Link>
 
 
@@ -82,8 +76,7 @@ export const Home = () => {
               <p>we Use the following cookies</p>
 
               <ol>
-                <li><strong>Strictly necessary cookies:</strong> These are cookies that are required for the operation of our Platform. These essential cookies are always enabled because our Platform would not work properly without them. They include, for example, cookies that enable you to log into secure areas of our Platforms. You can switch off these cookies in your settings, but you may then not be able to access all or parts of our Platform.   
-                
+                <li><strong>Strictly necessary cookies:</strong> These are cookies that are required for the operation of our Platform. These essential cookies are always enabled because our Platform would not work properly without them. They include, for example, cookies that enable you to log into secure areas of our Platforms. You can switch off these cookies in your settings, but you may then not be able to access all or parts of our Platform.
                 </li>
                 <li>
                   <strong>Analytical or perormance cookies:</strong> These allow us to recognise and count the number of visitors and to see how visitors move around our Platform when they are using it. This helps us to improve the way our Platforms works, for example, by ensuring that users are finding what they are looking for easily.
@@ -118,13 +111,13 @@ export const Home = () => {
                     <div className={styles.vdownloadLinkContainer}>
 
                       <Link className={styles.downloadLink}
-                      href="#"
+                      href="https://play.google.com/store/apps/details?id=com.eatables.app"
                       ><Image src="assets/images/playstore.svg"
                       width={15}
                       height={15}
                       alt="playstore icon"/> Download on Playstore</Link>
                       <Link
-                      href="#"
+                      href="https://apps.apple.com/us/app/eatables/id6502586489"
                       className={styles.downloadLink}
                       > <Image src="assets/images/apple.svg"
                       width={15}
