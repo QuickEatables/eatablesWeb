@@ -136,6 +136,8 @@ const Nav = () => {
   const [isNavDisplayVisible, setNavDisplayVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0); // Initialize to 0 instead of window.scrollY
 
+    const legalPages = ['/terms-of-service', '/privacy', '/cookies', '/contractor-agreement', '/vendor-agreement', '/delete-account'];
+
   const navDisplay = () => {
     setNavDisplayVisible(!isNavDisplayVisible);
   };
@@ -163,7 +165,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.greenBg : ''}`}>
+      <nav className={`${styles.nav} ${legalPages.includes(pathname) ? styles.greenBg : ''}`}>
         <div>
 <Link href="/">
           <Image
@@ -171,11 +173,11 @@ const Nav = () => {
             alt="Eatables logo"
             width={150}
             height={100}
-            className={`${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navImage : styles.navImage}`}
+            className={`${legalPages.includes(pathname) ? styles.trans_navImage : styles.navImage}`}
           /></Link>
         </div>
 
-        <div className={`${styles.navLink} ${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navLink : ''}`}>
+        <div className={`${styles.navLink} ${legalPages.includes(pathname) ? styles.trans_navLink : ''}`}>
           <Link
             href="/"
             className={`${styles.navItem} ${
@@ -205,7 +207,7 @@ const Nav = () => {
 
       <nav
         className={`${styles.navmobile} ${
-          ['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navmobile : ''
+          legalPages.includes(pathname) ? styles.trans_navmobile : ''
         }`}
       >
 <Link href="/">
