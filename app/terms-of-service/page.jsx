@@ -30,7 +30,7 @@ export const Home = () => {
               {" "}
               Terms of Service
             </Link>
-            <Link className={styles.link} href="/privacy-policy">
+            <Link className={styles.link} href="/privacy">
               Privacy Policy
             </Link>
             <Link className={styles.link} href="/cookies">

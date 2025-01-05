@@ -79,7 +79,7 @@ const Footer = ({isVendorPage}) => {
           <Link href="/terms-of-service">
               <p>Terms of Service</p>
           </Link>
-          <Link href="/privacy-policy">
+          <Link href="/privacy">
               <p>Privacy Policy</p>
           </Link>
           <Link href="/cookies">

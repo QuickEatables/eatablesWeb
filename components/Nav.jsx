@@ -163,7 +163,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.greenBg : ''}`}>
+      <nav className={`${styles.nav} ${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.greenBg : ''}`}>
         <div>
 <Link href="/">
           <Image
@@ -171,11 +171,11 @@ const Nav = () => {
             alt="Eatables logo"
             width={150}
             height={100}
-            className={`${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navImage : styles.navImage}`}
+            className={`${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navImage : styles.navImage}`}
           /></Link>
         </div>
 
-        <div className={`${styles.navLink} ${['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navLink : ''}`}>
+        <div className={`${styles.navLink} ${['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navLink : ''}`}>
           <Link
             href="/"
             className={`${styles.navItem} ${
@@ -205,7 +205,7 @@ const Nav = () => {
 
       <nav
         className={`${styles.navmobile} ${
-          ['/terms-of-service', '/privacy-policy', '/cookies'].includes(pathname) ? styles.trans_navmobile : ''
+          ['/terms-of-service', '/privacy', '/cookies'].includes(pathname) ? styles.trans_navmobile : ''
         }`}
       >
 <Link href="/">

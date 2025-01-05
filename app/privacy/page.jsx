@@ -37,9 +37,9 @@ export const Home = () => {
                 href="/terms-of-service"
                 > Terms of Service</Link>
                 <Link className={`${styles.link} ${
-                    pathname === "/privacy-policy" ? styles.active : ""
+                    pathname === "/privacy" ? styles.active : ""
                   }`}
-                href="/privacy-policy"
+                href="/privacy"
                 > Privacy Policy</Link>
                 <Link className={styles.link}
                 href="/cookies"
