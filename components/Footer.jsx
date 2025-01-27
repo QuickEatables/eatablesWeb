@@ -11,8 +11,15 @@ const Footer = ({isVendorPage}) => {
     <div className={styles.spts}>
 
         <div> 
+          <h2>Contact</h2>
+          <p>52 Saka Tinubu St<br/>
+             Victoria Island, Lagos 101241,<br/>
+             Lagos</p>
+          <p>Email: <a href="mailto:support@quickeatables.com">support@quickeatables.com</a></p>
+        </div>
 
-          <h2> Social</h2>
+        <div> 
+          <h2>Social</h2>
             <Link href="https://www.instagram.com/eatablesapp_ng?" target="_blank" rel="noopener noreferrer">
               <div className={styles.socials}>
                 <Image
