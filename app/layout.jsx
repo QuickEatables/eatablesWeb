@@ -4,6 +4,7 @@ export const metadata = {
   description: 'Get connected to your next best meals'
 }
 import { Ubuntu } from 'next/font/google';
+import Script from "next/script";
 
 const ubuntu = Ubuntu({
   subsets: ['latin'], 
@@ -24,6 +25,21 @@ const RootLayout = ({children}) => {
             {children}
           </main>
             
+          <Script id="zoho-salesiq" strategy="afterInteractive">
+            {`
+              var $zoho=$zoho || {};
+              $zoho.salesiq = $zoho.salesiq || {
+                widgetcode: "siqea8710ad44c1c7d57907e2b63191739457718c2066693da729460f2f55db7cfe",
+                values: {},
+                ready: function() {},
+              };
+            `}
+          </Script>
+          <Script
+            src="https://salesiq.zoho.com/widget"
+            strategy="afterInteractive"
+          />
+          <div id="zsiqwidget"></div>
         </body>
     </html>
   )
