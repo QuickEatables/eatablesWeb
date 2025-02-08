@@ -25,21 +25,29 @@ const RootLayout = ({children}) => {
             {children}
           </main>
             
-          <Script id="zoho-salesiq" strategy="afterInteractive">
-            {`
-              var $zoho=$zoho || {};
-              $zoho.salesiq = $zoho.salesiq || {
-                widgetcode: "siqea8710ad44c1c7d57907e2b63191739457718c2066693da729460f2f55db7cfe",
-                values: {},
-                ready: function() {},
+        <Script
+          id="zohodeskasap"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var d = document;
+              var s = d.createElement("script");
+              s.type = "text/javascript";
+              s.id = "zohodeskasapscript";
+              s.defer = true;
+              s.nonce = "{place_your_nonce_value_here}";
+              s.src = "https://desk.zoho.com/portal/api/web/asapApp/1087407000000301452?orgId=878312228";
+              var t = d.getElementsByTagName("script")[0];
+              t.parentNode.insertBefore(s, t);
+              window.ZohoDeskAsapReady = function(s) {
+                var e = window.ZohoDeskAsap__asyncalls = window.ZohoDeskAsap__asyncalls || [];
+                window.ZohoDeskAsapReadyStatus ? (s && e.push(s), e.forEach(s => s && s()), 
+                window.ZohoDeskAsap__asyncalls = null) : s && e.push(s);
               };
-            `}
-          </Script>
-          <Script
-            src="https://salesiq.zoho.com/widget"
-            strategy="afterInteractive"
-          />
-          <div id="zsiqwidget"></div>
+            `,
+          }}
+        />
+
         </body>
     </html>
   )
