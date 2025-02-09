@@ -12,7 +12,6 @@ const ubuntu = Ubuntu({
   variable: '--font-ubuntu',
 });
 
-
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
@@ -36,7 +35,7 @@ const RootLayout = ({children}) => {
               s.id = "zohodeskasapscript";
               s.defer = true;
               s.nonce = "{place_your_nonce_value_here}";
-              s.src = "https://desk.zoho.com/portal/api/web/asapApp/1087407000000301452?orgId=878312228";
+              s.src = "https://desk.zoho.com/portal/api/web/asapApp/1087407000000325048?orgId=878312228";
               var t = d.getElementsByTagName("script")[0];
               t.parentNode.insertBefore(s, t);
               window.ZohoDeskAsapReady = function(s) {
