@@ -1,0 +1,145 @@
+
+
+.main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.green{
+    display: none;
+}
+
+.cookie_main{
+    margin-bottom: 40px;
+}
+
+.downloadLinkContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.vdownloadLinkContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.empty{
+    margin: 40px 0;
+    text-align: center;
+}
+
+
+.h_3, .h_4{
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+    color: #333;
+}
+
+.stp{
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+.downloadLink{
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.downloadLink:hover{
+    background-color: #0052a3;
+}
+
+.sectionFour{
+    background-color: white;
+    margin: 40px 0;
+}
+
+.cookieNav_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.cookie_nav{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: #0066cc;
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.link:hover{
+    color: #0052a3;
+}
+
+.link.active{
+    color: #333;
+    font-weight: 600;
+}
+
+.cookie_wrapper{
+    display: block;
+    margin: 20px 0;
+}
+
+.trans_h1{
+    font-size: 28px;
+    margin: 20px 0;
+    color: #333;
+    text-align: center;
+}
+
+.footerWrapper{
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px){
+    .main{
+        padding: 15px;
+    }
+    
+    .trans_h1{
+        font-size: 24px;
+    }
+    
+    .h_3, .h_4{
+        font-size: 20px;
+    }
+    
+    .cookie_wrapper{
+        margin: 15px 0;
+    }
+    
+    .downloadLink{
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
