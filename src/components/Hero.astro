@@ -160,12 +160,19 @@
     }
 
     .download-buttons {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: nowrap;
+    }
+
+    .download-buttons img {
+      height: 40px;
+      width: auto;
     }
 
     .btn {
-      min-width: 250px;
+      min-width: 180px;
     }
 
     .logo {
@@ -195,12 +202,25 @@
     .hero-content p {
       font-size: 1rem;
     }
+
+    .download-buttons {
+      gap: 0.5rem;
+    }
+
+    .download-buttons img {
+      height: 48px;
+      width: auto;
+    }
+
+    .btn {
+      min-width: 150px;
+    }
   }
 </style>
 
 <script>
   // Typewriter animation
-  const words = ['Food', 'Groceries', 'Food Stuffs', 'Pharmacies', 'Beverages', 'Pastries'];
+  const words = ['Food', 'Groceries', 'Food Stuffs', 'pharmaceuticals', 'Beverages', 'Pastries'];
   const typewriterElement = document.getElementById('typewriter');
   let wordIndex = 0;
   let charIndex = 0;
