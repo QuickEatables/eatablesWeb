@@ -1,0 +1,80 @@
+---
+// Quote.astro - Simple quote section
+---
+
+<section class="quote-section">
+  <div class="container">
+    <h2>Did you know?</h2>
+    <p>
+      When you order through Eatables, you're not just making your life easier. You're
+      supporting thousands of local businesses, helping delivery partners earn a living, and
+      contributing to the growth of your local community. Every order makes a difference.
+    </p>
+  </div>
+</section>
+
+<style>
+  .quote-section {
+    background: #F8F8F8;
+    padding: 80px 0px;
+margin: 0px 60px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .quote-section h2 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 2rem;
+  }
+
+  .quote-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #202125;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .quote-section {
+      padding: 60px 0;
+margin: 0px 0px;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .quote-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-section p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .quote-section h2 {
+      font-size: 1.75rem;
+    }
+
+    .quote-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+</style>

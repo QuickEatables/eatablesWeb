@@ -1,0 +1,253 @@
+---
+// VendorRider.astro - Two-card section for vendor and rider signup
+---
+
+<section class="vendor-rider-section">
+  <div class="container">
+    <div class="cards-wrapper">
+      <!-- Become a Vendor Partner -->
+      <div class="partner-card">
+        <div class="card-background vendor-bg"></div>
+        <div class="card-content">
+          <h3>Become a Vendor Partner</h3>
+          <p>Grow your business and reach new customers by partnering with us</p>
+          <a href="https://onelink.to/nfd8hr" class="cta-button vendor-btn">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Become a Rider -->
+      <div class="partner-card">
+        <div class="card-background rider-bg"></div>
+        <div class="card-content">
+          <h3>Become a Rider</h3>
+          <p>Join our fleet and enjoy flexible hours and competitive earnings</p>
+          <a href="https://onelink.to/6b5bz7" class="cta-button rider-btn">
+            Sign Up Now
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .vendor-rider-section {
+    padding: 50px 0;
+    background: #F9FAFB;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .partner-card {
+    position: relative;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+  }
+
+  .partner-card:hover .card-background {
+    transform: scale(1.02);
+  }
+
+  .vendor-bg {
+    background-image: url('/vendors.png');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+  }
+
+  .rider-bg {
+    background-image: url('/riders.png');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    padding: 4rem 2rem 2rem;
+    z-index: 10;
+  }
+
+  .card-content h3 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+max-width: 300px;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .vendor-btn {
+    background: #014425;
+    color: white;
+    border: 2px solid #014425;
+  }
+
+  .vendor-btn:hover {
+    background: transparent;
+    color: #014425;
+    border-color: #014425;
+    transform: translateY(-1px);
+  }
+
+  .rider-btn {
+    background: #014425;
+    color: white;
+    border: 2px solid #014425;
+  }
+
+  .rider-btn:hover {
+    background: transparent;
+    color: #014425;
+    border-color: #014425;
+    transform: translateY(-1px);
+  }
+
+  .cta-button svg {
+    transition: transform 0.3s ease;
+  }
+
+  .cta-button:hover svg {
+    transform: translateX(2px);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .partner-card {
+      height: 280px;
+    }
+
+    .card-content h3 {
+      font-size: 1.5rem;
+    }
+
+    .card-content {
+      padding: 3rem 1.5rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .vendor-rider-section {
+      padding: 80px 0;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .partner-card {
+      height: 250px;
+    }
+
+    .card-content h3 {
+      font-size: 1.375rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+    }
+
+    .card-content {
+      padding: 3rem 1.5rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .vendor-rider-section {
+      padding: 60px 0;
+    }
+
+    .partner-card {
+      height: 220px;
+    }
+
+    .card-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-content p {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-content {
+      padding: 2.5rem 1rem 1rem;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>

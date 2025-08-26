@@ -1,0 +1,253 @@
+---
+// Hero.astro - Full screen hero section component
+---
+
+<section class="hero">
+  <!-- Logo in top left -->
+  <div class="logo">
+    <img src="/logo.svg" alt="Eatables Logo" />
+    <span>Eatables</span>
+  </div>
+  
+  <!-- Main content in center -->
+  <div class="hero-content">
+    <h1>Your <span id="typewriter" class="typewriter-text"></span> delivered in minutes</h1>
+    
+    <!-- Download buttons -->
+    <div class="download-buttons">
+      <a href="https://apps.apple.com/us/app/eatables/id6502586489" class=" btn-ios">
+        <img src="apple-download-btn.svg" alt="Download for iOS">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.eatables.app" class=" btn-android">
+        <img src="google-download-btn.svg" alt="Download for Android">
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('/heroBg.png') center/cover no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    /* filter: brightness(0) invert(1); */
+  }
+
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 0 2rem;
+    z-index: 5;
+  }
+
+  .hero-content h1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .typewriter-text {
+    color: #D72300;
+    position: relative;
+  }
+
+  .typewriter-text::after {
+    content: '|';
+    color: #D72300;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    justify-content: center;
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .btn-ios:hover,
+  .btn-android:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .download-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      min-width: 250px;
+    }
+
+    .logo {
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .logo span {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Typewriter animation
+  const words = ['Food', 'Groceries', 'Food Stuffs', 'Pharmacies', 'Beverages', 'Pastries'];
+  const typewriterElement = document.getElementById('typewriter');
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 150;
+  let deleteSpeed = 100;
+  let delayBetweenWords = 2000;
+
+  function typeWriter() {
+    if (!typewriterElement) return;
+    
+    const currentWord = words[wordIndex];
+    
+    if (!isDeleting) {
+      // Typing
+      typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      
+      if (charIndex === currentWord.length) {
+        // Finished typing, wait then start deleting
+        setTimeout(() => {
+          isDeleting = true;
+          typeWriter();
+        }, delayBetweenWords);
+        return;
+      }
+      
+      setTimeout(typeWriter, typeSpeed);
+    } else {
+      // Deleting
+      typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      
+      if (charIndex === 0) {
+        // Finished deleting, move to next word
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWriter, 500);
+        return;
+      }
+      
+      setTimeout(typeWriter, deleteSpeed);
+    }
+  }
+
+  // Start the animation when the page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeWriter, 1000);
+  });
+</script>

@@ -1,0 +1,274 @@
+---
+// DownloadCTA.astro - Final download call-to-action section
+---
+
+<section class="download-cta-section">
+  <div class="container">
+    <div class="content-wrapper">
+      <!-- Left content -->
+      <div class="text-content">
+        <h2>Download the app now!</h2>
+        <p>Experience seamless online ordering only on the Eatables</p>
+        
+        <!-- Download buttons -->
+        <div class="download-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.eatables.app" class="download-btn">
+            <img src="/google-download-btn.svg" alt="Get it on Google Play" />
+          </a>
+          <a href="https://apps.apple.com/us/app/eatables/id6502586489" class="download-btn">
+            <img src="/apple-download-btn.svg" alt="Download on the App Store" />
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right content - Phone mockup -->
+      <div class="phone-mockup">
+        <div class="phone-container">
+          <img src="/phone-mockup.png" alt="Eatables App on Phone" class="phone-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .download-cta-section {
+    padding: 0px 0;
+    max-width: 1200px;
+    background: linear-gradient(180deg, #ffffff 0%, #ADD7C4 100%);
+    border-radius: 40px;
+    border: 5px solid #ADD7C4;
+    margin: 4rem auto;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    height: 100%;
+  }
+
+  .text-content h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: #1C1C1C;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .text-content p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #596378;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .download-btn {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .download-btn img {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+
+  .phone-mockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .phone-container {
+    margin-top: 40px;
+    height: calc(100% - 40px);
+    overflow: hidden;
+  }
+
+  .phone-image {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: contain;
+    object-position: top center;
+  }
+
+  /* Decorative elements */
+  .download-cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .download-cta-section {
+      margin: 3rem 2rem;
+      border-radius: 30px;
+      height: 450px;
+    }
+
+    .content-wrapper {
+      gap: 3rem;
+    }
+
+    .text-content h2 {
+      font-size: 2.25rem;
+    }
+
+    .phone-container {
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .download-cta-section {
+      padding: 60px 0;
+      margin: 2rem 1rem;
+      border-radius: 20px;
+      height: 400px;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .content-wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      text-align: center;
+      height: 100%;
+    }
+
+    .text-content {
+      order: 1;
+      z-index: 10;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .phone-mockup {
+      order: 2;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .phone-container {
+      position: relative;
+      max-width: 200px;
+      height: auto;
+      bottom: 0;
+    }
+
+    .qr-text {
+      margin-top: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .text-content h2 {
+      font-size: 2rem;
+    }
+
+    .text-content p {
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .download-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .download-cta-section {
+      padding: 60px 0;
+      margin: 0.5rem;
+    }
+
+    .text-content h2 {
+      font-size: 1.75rem;
+    }
+
+    .text-content p {
+      font-size: 1rem;
+    }
+
+    .download-btn img {
+      height: 50px;
+    }
+
+    .download-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .phone-container {
+      max-width: 180px;
+    }
+
+    .qr-text {
+      margin-top: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .qr-text p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
