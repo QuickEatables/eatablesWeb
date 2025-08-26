@@ -5,7 +5,7 @@ RUN apk add --no-cache dumb-init
 
 # Create app user
 RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
+RUN adduser -S astrojs -u 1001
 
 # Set working directory
 WORKDIR /app
@@ -19,17 +19,16 @@ RUN npm install
 # Copy source code
 COPY . .
 
-# Generate TailwindCSS and build the application
-RUN npm run build:css
+# Build the Astro application
 RUN npm run build
 
 # Remove dev dependencies after build
 RUN npm prune --production
 
 # Change ownership
-RUN chown -R nextjs:nodejs /app
+RUN chown -R astrojs:nodejs /app
 
-USER nextjs
+USER astrojs
 
 EXPOSE 8080
 
