@@ -1,6 +1,4 @@
-
-
-.main{
+.main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -10,22 +8,22 @@
     color: #333;
 }
 
-.green{
+.green {
     display: none;
 }
 
-.cookie_main{
+.cookie_main {
     margin-bottom: 40px;
 }
 
-.downloadLinkContainer{
+.downloadLinkContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin: 20px 0;
 }
 
-.vdownloadLinkContainer{
+.vdownloadLinkContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -33,26 +31,27 @@
     margin: 20px 0;
 }
 
-.empty{
+.empty {
     margin: 40px 0;
     text-align: center;
 }
 
 
-.h_3, .h_4{
+.h_3,
+.h_4 {
     font-size: 24px;
     margin: 20px 0 10px 0;
     color: #333;
 }
 
-.stp{
+.stp {
     margin: 10px 0;
     font-size: 16px;
     color: #666;
     text-align: center;
 }
 
-.downloadLink{
+.downloadLink {
     background-color: #0066cc;
     color: white;
     text-decoration: none;
@@ -65,28 +64,28 @@
     transition: background-color 0.3s ease;
 }
 
-.downloadLink:hover{
+.downloadLink:hover {
     background-color: #0052a3;
 }
 
-.sectionFour{
+.sectionFour {
     background-color: white;
     margin: 40px 0;
 }
 
-.cookieNav_wrapper{
+.cookieNav_wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 30px;
 }
 
-.cookie_nav{
+.cookie_nav {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: #0066cc;
     padding: 8px 0;
@@ -94,52 +93,788 @@
     border-bottom: 1px solid #eee;
 }
 
-.link:hover{
+.link:hover {
     color: #0052a3;
 }
 
-.link.active{
+.link.active {
     color: #333;
     font-weight: 600;
 }
 
-.cookie_wrapper{
+.cookie_wrapper {
     display: block;
     margin: 20px 0;
 }
 
-.trans_h1{
+.trans_h1 {
     font-size: 28px;
     margin: 20px 0;
     color: #333;
     text-align: center;
 }
 
-.footerWrapper{
+.footerWrapper {
     margin-top: 40px;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px){
-    .main{
-        padding: 15px;
+/* Vendor info and loading styles */
+.vendorInfo {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #e9ecef;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #e9ecef;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e9ecef;
+    border-top: 4px solid #0066cc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
-    
-    .trans_h1{
-        font-size: 24px;
-    }
-    
-    .h_3, .h_4{
-        font-size: 20px;
-    }
-    
-    .cookie_wrapper{
-        margin: 15px 0;
-    }
-    
-    .downloadLink{
-        padding: 10px 16px;
-        font-size: 13px;
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
+.loadingContainer p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 15px;
+    }
+
+    .trans_h1 {
+        font-size: 24px;
+    }
+
+    .h_3,
+    .h_4 {
+        font-size: 20px;
+    }
+
+    .cookie_wrapper {
+        margin: 15px 0;
+    }
+
+    .downloadLink {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .loadingContainer {
+        padding: 30px;
+    }
+
+    .spinner {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+.Heading7 {
+    margin-top: 10pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 0;
+    orphans: 0;
+    font-family: Calibri;
+    font-size: 12pt;
+    font-weight: normal;
+    font-style: italic;
+    color: #404040
+}
+
+.CommentSubject {
+    widows: 0;
+    orphans: 0;
+    font-size: 10pt;
+    font-weight: bold
+}
+
+.CommentText {
+    widows: 0;
+    orphans: 0;
+    font-size: 10pt
+}
+
+.Default {
+    widows: 2;
+    orphans: 2;
+    font-family: '705';
+    font-size: 12pt;
+    color: #000000
+}
+
+.Footer {
+    widows: 0;
+    orphans: 0;
+    font-size: 12pt
+}
+
+.FootnoteText {
+    widows: 0;
+    orphans: 0;
+    font-size: 10pt
+}
+
+.Header {
+    widows: 0;
+    orphans: 0;
+    font-size: 12pt
+}
+
+.ListParagraph {
+    margin-left: 36pt;
+    widows: 0;
+    orphans: 0;
+    font-size: 12pt
+}
+
+.Revision {
+    widows: 2;
+    orphans: 2;
+    font-size: 12pt
+}
+
+.Subtitle {
+    margin-top: 18pt;
+    margin-bottom: 4pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 2;
+    orphans: 2;
+    font-family: Georgia;
+    font-size: 24pt;
+    font-style: italic;
+    color: #666666
+}
+
+.Title {
+    margin-top: 24pt;
+    margin-bottom: 6pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 2;
+    orphans: 2;
+    font-size: 36pt;
+    font-weight: bold;
+    color: #000000
+}
+
+span.CommentReference {
+    font-size: 8pt
+}
+
+span.CommentSubjectChar {
+    font-size: 10pt;
+    font-weight: bold
+}
+
+span.CommentTextChar {
+    font-size: 10pt
+}
+
+span.FootnoteReference {
+    vertical-align: super
+}
+
+span.FootnoteTextChar {
+    font-size: 10pt
+}
+
+span.Heading7Char {
+    font-family: Calibri;
+    font-style: italic;
+    color: #404040
+}
+
+.Style1 {
+    margin-left: 18pt;
+    text-indent: -18pt
+}
+
+.Style2 {
+    margin-left: 18pt;
+    text-indent: -18pt
+}
+
+.awlist1 {
+    list-style: none;
+    counter-reset: awlistcounter3_0
+}
+
+.awlist1>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist2 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 1
+}
+
+.awlist2>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist3 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 2
+}
+
+.awlist3>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist4 {
+    list-style: none;
+    counter-reset: awlistcounter3_1
+}
+
+.awlist4>li:before {
+    content: counter(awlistcounter3_0) '.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist5 {
+    list-style: none;
+    counter-reset: awlistcounter16_0
+}
+
+.awlist5>li:before {
+    content: '4.' counter(awlistcounter16_0) '.';
+    counter-increment: awlistcounter16_0
+}
+
+.awlist6 {
+    list-style: none;
+    counter-reset: awlistcounter16_0 1
+}
+
+.awlist6>li:before {
+    content: '4.' counter(awlistcounter16_0) '.';
+    counter-increment: awlistcounter16_0
+}
+
+.awlist7 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 4
+}
+
+.awlist7>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist8 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist8>li:before {
+    content: '6.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist9 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 6
+}
+
+.awlist9>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist10 {
+    list-style: none;
+    counter-reset: awlistcounter3_1
+}
+
+.awlist10>li:before {
+    content: '8.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist11 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 8
+}
+
+.awlist11>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist12 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist12>li:before {
+    content: '10.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist13 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 3
+}
+
+.awlist13>li:before {
+    content: '10.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist14 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 4
+}
+
+.awlist14>li:before {
+    content: '10.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist15 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 5
+}
+
+.awlist15>li:before {
+    content: '10.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist16 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 10
+}
+
+.awlist16>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist17 {
+    list-style: none;
+    counter-reset: awlistcounter3_1
+}
+
+.awlist17>li:before {
+    content: '11.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist18 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 1
+}
+
+.awlist18>li:before {
+    content: '11.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist19 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist19>li:before {
+    content: '11.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist20 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 3
+}
+
+.awlist20>li:before {
+    content: '11.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist21 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 11
+}
+
+.awlist21>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist22 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 1
+}
+
+.awlist22>li:before {
+    content: '12.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist23 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 12
+}
+
+.awlist23>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist24 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 5
+}
+
+.awlist24>li:before {
+    content: '13.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist25 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 6
+}
+
+.awlist25>li:before {
+    content: '13.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist26 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 7
+}
+
+.awlist26>li:before {
+    content: '13.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist27 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 13
+}
+
+.awlist27>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist28 {
+    list-style: none;
+    counter-reset: awlistcounter3_1
+}
+
+.awlist28>li:before {
+    content: '17.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist29 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 1
+}
+
+.awlist29>li:before {
+    content: '17.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist30 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist30>li:before {
+    content: '17.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist31 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 17
+}
+
+.awlist31>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist32 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 1
+}
+
+.awlist32>li:before {
+    content: '18.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist33 {
+    list-style: none;
+    counter-reset: awlistcounter4_0
+}
+
+.awlist33>li:before {
+    content: counter(awlistcounter4_0, lower-latin) ')';
+    counter-increment: awlistcounter4_0
+}
+
+.awlist34 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist34>li:before {
+    content: '18.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist35 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 3
+}
+
+.awlist35>li:before {
+    content: '18.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist36 {
+    list-style: none;
+    counter-reset: awlistcounter3_0 18
+}
+
+.awlist36>li:before {
+    content: counter(awlistcounter3_0) '.';
+    counter-increment: awlistcounter3_0
+}
+
+.awlist37 {
+    list-style: none;
+    counter-reset: awlistcounter3_1
+}
+
+.awlist37>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist38 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 1
+}
+
+.awlist38>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist39 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 2
+}
+
+.awlist39>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist40 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 3
+}
+
+.awlist40>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist41 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 4
+}
+
+.awlist41>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+
+.awlist42 {
+    list-style: none;
+    counter-reset: awlistcounter3_1 5
+}
+
+.awlist42>li:before {
+    content: '19.' counter(awlistcounter3_1) '.';
+    counter-increment: awlistcounter3_1
+}
+/* 
+@media (max-width: 900px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+} */
+
+
+/* body {
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 12pt
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0pt
+}
+
+li {
+    margin-top: 0pt;
+    margin-bottom: 0pt
+}
+
+h1 {
+    page-break-inside: auto;
+    page-break-after: auto;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #000000
+}
+
+h2 {
+    page-break-inside: auto;
+    page-break-after: auto;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #000000
+}
+
+h3 {
+    margin-top: 14pt;
+    margin-bottom: 4pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #000000
+}
+
+h4 {
+    margin-top: 12pt;
+    margin-bottom: 2pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000
+}
+
+h5 {
+    margin-top: 11pt;
+    margin-bottom: 2pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000000
+}
+
+h6 {
+    margin-top: 10pt;
+    margin-bottom: 2pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    widows: 0;
+    orphans: 0;
+    font-family: PreciousSans-Book;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000
+} */
