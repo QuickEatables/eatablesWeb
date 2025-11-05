@@ -1,0 +1,1352 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const vendorId = Astro.url.searchParams.get('vendorId');
+---
+
+<Layout>
+	<div class="main">
+		<div class="green"></div>
+		<div class="cookie_wrapper">
+			<section class="cookie_main">
+				<div id="loading-container" class="loadingContainer" style="display: none;">
+					<div class="spinner"></div>
+					<p>Loading vendor information...</p>
+				</div>
+				<div class="vendor-agreement-content pharmacy-agreement-content">
+					<div>
+			<p style="margin-bottom:0pt; line-height:150%; widows:0; orphans:0; font-size:12pt">
+				<span style="font-family:Georgia">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:0pt; line-height:150%; widows:0; orphans:0; font-size:12pt">
+				<span style="font-family:Georgia">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:0pt; line-height:150%; widows:0; orphans:0; font-size:12pt">
+				<span style="font-family:Georgia">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:0pt; line-height:150%; widows:0; orphans:0; font-size:12pt">
+				<span style="font-family:Georgia">&#xa0;</span>
+			</p>
+			<p style="margin:1.1pt 96.2pt 0pt 36pt; text-indent:36pt; text-align:justify; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">SERVICE LEVEL</span></strong><strong> </strong><strong><span style="font-family:Georgia; ">AGREEMENT</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:11.75pt; margin-right:96.2pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong><strong><span style="font-family:Georgia; ">BETWEEN</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:11.75pt; margin-right:41.15pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong><strong><span style="font-family:Georgia; ">QUICKEATABLES DELIVERY LIMITED</span></strong>
+			</p>
+			<p style="margin-top:0.55pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:0.55pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:0.55pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-right:41.2pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">AND</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:11.9pt; margin-right:41.3pt; margin-bottom:0pt; text-align:center; line-height:150%; widows:0; orphans:0; font-size:18pt">
+				<strong><span style="font-family:Georgia; color:#ff0000">(VENDOR)</span></strong>
+			</p>
+		</div>
+		<br style="page-break-before:always; clear:both; mso-break-type:section-break" />
+		<div>
+			<ol style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:10pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>PARTIES</strong>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:4.6pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">THIS Service Level Agreement </span></strong><span style="font-family:'Times New Roman'">(“the Agreement”) is made this </span><strong><span style="font-family:'Times New Roman'; color:#ff0000">(Date) </span></strong><strong><span style="font-family:'Times New Roman'; ">day of </span></strong><strong><span style="font-family:'Times New Roman'; color:#ff0000">(Month) (Year).</span></strong>
+			</p>
+			<p style="margin-top:3.1pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">BETWEEN</span></strong>
+			</p>
+			<p style="margin-right:5.4pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">QUICKEATABLES DELIVERY</span></strong><strong><span style="font-family:'Times New Roman'; ">&#xa0; </span></strong><strong><span style="font-family:'Times New Roman'; ">LIMITED</span></strong><span style="font-family:'Times New Roman'">, a company duly incorporated under the Companies and Allied Matters Act 2020 and having its registered address at 52 Saka Tinubu Street, Victoria Island, Lagos State (hereinafter referred to as “</span><strong><span style="font-family:'Times New Roman'; ">QuickEatables</span></strong><span style="font-family:'Times New Roman'">”, which expression shall, where the context so admits, include its successors-in-title, legal representatives, and assigns) of the one part;</span>
+			</p>
+			<p style="margin-top:0.05pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">AND</span></strong>
+			</p>
+			<p style="margin-right:5.4pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span></strong><span style="font-family:'Times New Roman'">, </span><span style="font-family:'Times New Roman'; color:#ff0000">&#xa0;</span><span style="font-family:'Times New Roman'">a company duly incorporated under the Companies and Allied Matters Act 2020 and having its registered address at </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Address)</span><span style="font-family:'Times New Roman'"> (hereinafter referred to as “</span><strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span></strong><span style="font-family:'Times New Roman'">”, which expression shall, where the context so admits, include its successors-in-title, legal representatives, and assigns) of the one part;</span>
+			</p>
+			<p style="margin-top:0.05pt; margin-right:5.6pt; margin-bottom:10pt; text-align:justify; line-height:150%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">Both QuickEatables and </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> are hereby individually referred to as “the Party” and jointly as “the Parties”.</span>
+			</p>
+			<ol start="2" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:10pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>PURPOSE</strong>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">This Agreement defines the operational, commercial, and service level terms under which QuickEatables Delivery Limited shall host and provide online delivery and logistics services for </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">enabling customers to order PharmaHealth products through QuickEatables online platform while QuickEatables handles order management, payment processing, and delivery.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">shall act as a verified vendor on the QuickEatables platform and is responsible for maintaining accurate listings, adequate stock levels, and product authenticity for all items made available through the platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol start="3" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:10pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>DEFINITIONS</strong>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">Platform</span></strong><span style="font-family:'Times New Roman'">” means the QuickEatables online store and digital infrastructure through which customers order pharmaceutical and healthcare products.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">Vendor</span></strong><span style="font-family:'Times New Roman'">” means </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'">, whose products are hosted on the Platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">“Service</span></strong><span style="font-family:'Times New Roman'">” means the totality of logistics, order processing, delivery, and payment settlement operations provided by QuickEatables </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">“Order”</span></strong><span style="font-family:'Times New Roman'"> means a confirmed purchase request by a Customer through the Platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">Customer</span></strong><span style="font-family:'Times New Roman'">” means an end-user who purchases a product via the Platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">“Rider”</span></strong><span style="font-family:'Times New Roman'"> means an independent contractor engaged by Eatables for the purposes of providing last mile delivery/ dispatch services from </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> to the Customer while using Eatables Platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">Delivery Time-frame</span></strong><span style="font-family:'Times New Roman'">” means the maximum time between order confirmation and delivery to the customer. </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">Terms &amp; Conditions</span></strong><span style="font-family:'Times New Roman'">” means Unstructured Supplementary Service Data, which is a messaging protocol commonly used for sending short commands and requests without incurring connection or service charges.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">“</span><strong><span style="font-family:'Times New Roman'; ">SLA Metrics</span></strong><span style="font-family:'Times New Roman'">” means the performance standards and key performance indicators (KPIs) agreed to by both Parties.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span>
+			</p>
+			<ol start="4" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:10pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>COMMENCEMENT AND DURATION</strong>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">This Agreement shall commence on the Effective Date and remain valid for one (1) year, subject to renewal upon mutual agreement between the Parties.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span>
+			</p>
+			<ol start="5" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:0pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>SCOPE OF SERVICES</strong>
+				</li>
+			</ol>
+			<ul class="awlist1" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">QuickEatables (Service Provider) shall:</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">a. Provide the Service in accordance with this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">b. Host </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'; font-weight:normal"> verified vendor page on the QuickEatables online platform.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">c. Display and promote </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'; font-weight:normal"> listed products online for customer orders.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">d.. Process online orders and payments from customers.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">e. Handle order confirmation, pickup coordination, and last-mile delivery to customers.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">f. Perform the Services with the highest level of care, skill and diligence in accordance with</span><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0; </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">best practice in the industry.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">g. At all times have and maintain during the term of this Agreement, all necessary licences and </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">consents and comply with all applicable laws in relation to the Services.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">h. Agrees and undertakes that it shall not use information provided by the Vendor for any other </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">purpose than as stated in this Agreement. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">i. Notify </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name), </span><span style="font-family:'Times New Roman'; font-weight:normal">no later than 24 hours after delivery, following a successful delivery of an </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">Order through Eatables.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:4.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">j. Provide access to the to download delivery reports from its website showing the status of </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">deliveries and the Vendor’s progress on the Platform.</span>
+				</li>
+			</ul>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">5.2 </span></strong><strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span></strong><strong><span style="font-family:'Times New Roman'; ">shall</span></strong><span style="font-family:'Times New Roman'">:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">5.2a. Ensure all listed products are authentic, approved by NAFDAC, and compliant with all </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">applicable pharmaceutical laws.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">5.2b. Maintain sufficient physical stock of all products listed online.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">5.2c. Update product availability, pricing, and information in real-time or as required.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">5.2d. Package products securely and prepare them for pickup within 1 hour of order confirmation </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">during business hours.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">5.2e. Notify QuickEatables of any anticipated stock shortages, discontinued products, or </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">regulatory recalls.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">52f.</span><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Cooperate in resolving customer complaints related to product quality or packaging.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol start="6" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:32pt; margin-bottom:10pt; text-align:justify; line-height:115%; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
+					<strong>SERVICE LEVEL EXPECTATIONS</strong>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="width:36pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong>
+			</p>
+			<table style="margin-bottom:0pt; border:0.75pt solid #000000; padding:0pt; border-collapse:collapse">
+				<tr style="height:48.05pt">
+					<td style="width:148.8pt; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<strong><span style="font-family:'Times New Roman'; ">SLA Metric</span></strong>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<strong><span style="font-family:'Times New Roman'; ">QuickEatables Target</span></strong><span style="width:31pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">&#xa0;&#xa0;&#xa0; </span></strong>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span></strong><strong><span style="font-family:'Times New Roman'; ">Target</span></strong><span style="font-family:'Times New Roman'"> </span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Order Processing Time</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Instant</span><strong><span style="font-family:'Times New Roman'; "> </span></strong>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Prepare order for pickup within 10 minutes </span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Delivery Completion</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">95% within 20 minutes </span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">N/A</span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Product Availability</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">N/A</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Maintain ≥ 95% stock availability</span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Product Accuracy</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">&#xa0;</span><span style="font-family:'Times New Roman'">N/A</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">≥ 99% accuracy in fulfilled orders</span>
+						</p>
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Customer-Complaint Response</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Within 5 minutes</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<strong><span style="font-family:'Times New Roman'; ">N/A</span></strong>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="width:36pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><span style="font-family:'Times New Roman'">Payment Settlement</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Close of Business Daily</span><span style="width:28.34pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">N/A</span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Customer-Complaint Resolution </span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Within 24 hours</span>
+						</p>
+					</td>
+					<td style="width:148.8pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding:0pt 5.03pt; vertical-align:top">
+						<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+							<span style="font-family:'Times New Roman'">Within 24 hours</span>
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="width:36pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">Failure to meet the above metrics for three consecutive months may trigger a performance review or temporary suspension of the </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)’s </span><span style="font-family:'Times New Roman'">online visibility until compliance is restored.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol start="7" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-top:18pt; margin-left:13.75pt; margin-bottom:0pt; text-align:justify; line-height:normal; padding-left:4.25pt; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="font-family:'Times New Roman'">Service Usage</span>
+				</li>
+			</ol>
+			<ol class="awlist2" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:1.38pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; font-weight:normal">In order to use the Service after on-boarding, </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'; font-weight:normal">shall access the provided account </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">through the Eatables web app, website or mobile application (“</span><span style="font-family:'Times New Roman'">the Service Platform</span><span style="font-family:'Times New Roman'; font-weight:normal">”).</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:0.5pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'; font-weight:normal">agrees to comply with all applicable privacy policies, terms &amp; conditions and app </span><br /><span style="font-family:'Times New Roman'; font-weight:normal">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'; font-weight:normal">use directions. It shall not misuse its access to the Service Platform/the Service or data that becomes accessible to it by virtue of the on-boarding on the Eatables Platform.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:0.5pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'; font-weight:normal">shall take all commercially reasonable steps to maintain the strict confidentiality and security of its Eatables Platform Account. These steps shall include, but not limited to: using strong passwords, enabling two-factor authentication for all accounts, and not sharing credentials with any unauthorised third party.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:0.5pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; font-weight:normal; color:#ff0000">(Vendor Name</span><span style="font-family:'Times New Roman'; font-weight:normal">) accepts all liabilities arising from any losses, costs, damages or other liabilities arising from unauthorized use of the login details to its Eatables Platform Account.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt; font-weight:bold">
+					<span style="width:0.5pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; font-weight:normal">Any misuse by any of the parties of the Service and/or intentionally or negligently misuse personal data of Customers, eg- by sending unsolicited messages or calls to Customers, such party agrees to be held liable for any claims, loss, damage, regulatory fines or any other legal liability arising from such act. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:6pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:Garamond; font-size:12pt">
+					<span style="width:1.5pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">agrees that it shall only use Eatables Platform strictly for the purposes of this Agreement and nothing more.</span>
+				</li>
+			</ol>
+			<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span>
+			</p>
+			<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">8</span></strong><span style="font-family:'Times New Roman'"> </span><strong><span style="font-family:'Times New Roman'; ">Consideration, Payment and Commission.</span></strong>
+			</p>
+			<ol class="awlist3" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal">The Parties agree that this onboarding process is gratis and </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">is not required to make any payment to Eatables for this Service at the time of onboarding.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal"> The Parties agree that notwithstanding the provision of clause 8.1, that on </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Date) (Month)</span><span style="line-height:115%; font-size:12pt; font-weight:normal">, </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Year) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">after the execution of this Agreement, the </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">shall commence to pay a 5% commission (‘Commission’) on every order that is placed and serviced on Eatables Platform. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal"> Periodically, both parties may review the Commission as provided in clause 8.2</span><span style="line-height:115%; font-size:12pt; font-weight:normal">&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal">and shall mutually comply with such review, failure of which may lead to the termination of this Agreement. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal">Eatables shall include the Commission at the point of the Customer’s order and shall immediately deduct such Commission before payment is remitted to the </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name).</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal">Eatables will use all reasonable endeavours to ensure the successful delivery of all orders made from the </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">by the Customer through its Platform.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">shall be responsible for and bear all charges &amp; taxes, applicable to the use of the Services, which accrue to the </span><span style="line-height:115%; font-size:12pt; font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="line-height:115%; font-size:12pt; font-weight:normal">in accordance with the law.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:10pt; text-indent:-18pt; text-align:justify; line-height:115%; font-family:'Times New Roman'; font-size:14pt; font-weight:bold; list-style-position:inside">
+					<span style="width:10.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:115%; font-size:12pt; font-weight:normal"> Eatables shall be responsible for and bear all charges &amp; taxes which accrue to it in accordance with the law.</span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">INVENTORY MANAGEMENT AND STOCK ACCURACY</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">9.1 </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">shall:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">a. Ensure real-time accuracy between online listings and physical stock.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">b. Immediately update or deactivate out-of-stock items to avoid failed orders.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">c. Be liable for any failed customer transactions resulting from false stock representation.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">d.Permit QuickEatables to perform periodic online audits of stock accuracy and product authenticity.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">10. QUALITY AND REGULATORY COMPLIANCE</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">10.1 </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">represents and warrants that:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">a. All listed products are approved by NAFDAC or other relevant authorities.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">b. Products are stored, handled, and transported in compliance with Good Distribution Practice (GDP) standards.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">c. No counterfeit, expired, or tampered products shall be listed or sold via the Platform.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">d. Any breach of this clause shall constitute a material breach and may result in immediate suspension or termination.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:18pt; margin-bottom:10pt; text-align:justify; page-break-after:avoid; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">11</span></strong><span style="font-family:'Times New Roman'">. </span><strong><span style="font-family:'Times New Roman'; ">Privacy Policy and Confidentiality</span></strong>
+			</p>
+			<ol class="awlist4" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-top:6pt; margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">acknowledges that all information provided by Eatables, including but not limited to customer data, message content, and usage statistics, is the confidential property of Eatables, and shall be for identification, order delivery or order rectification purposes only, unless otherwise agreed by the Parties. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal"> </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">agrees not to disclose or use any information submitted by Eatables for any purpose other than that necessary for using for the Service, and as otherwise expressly authorised by the Eatables in writing.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal; color:#ff0000"> (Vendor Name) </span><span style="font-weight:normal">acknowledges that all data provided by Eatables under this Agreement including Eatables customer’s data remains the property of Eatables and will not be copied or used for any purpose outside the scope of this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">shall not use any information or the personal data of Customer’s provided by Eatables through the Provision of this Services and via its Platform, for its personal use, eg. Shall not directly contact the Customers or send advertising or marketing materials or notifications to the Customers using data collected by virtue of using the Eatables Platform or Services.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">shall protect Eatables’ Customers’ information using the same standard of care that it applies to safeguard its own confidential information and the information shall be stored in such a way as to prevent any unauthorized disclosure thereof. </span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal">Both Parties agree that neither party shall disclose to any third party any details whatsoever of this Agreement without the prior written consent of the other party except as may be provided in this Agreement or except as shall be required by a court of competent jurisdiction or regulatory authority, or its legal and professional advisors and that such obligation shall survive the expiry of this Agreement and shall endure for a period of three (3) years from the date of expiry or termination of this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:12pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal"> A breach of provision shall be a material breach of this Agreement and this clause shall survive the termination of expiration of this Agreement. </span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">12. REPORTING AND COMMUNICATION</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">12.1. QuickEatables shall provide periodic sales and delivery reports to </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">as agreed mutually by both parties </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">12.2. </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">shall report any discrepancies or product issues within 48 hours of notification.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">12.3. Both Parties shall designate communication officers for operational coordination.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">13. TERMINATION</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span><span style="font-family:'Times New Roman'">Either Party may terminate this Agreement with thirty (30) days’ written notice, or immediately if:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.1. Either Party breaches material obligations and fails to remedy within seven (7) days of written notice;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.2. </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> lists counterfeit or unregistered pharmaceutical products;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.3. Either Party loses regulatory approval or license to operate;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.4. Repeated failure to meet SLA metrics occurs.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.5. Where a Party is obliged to defend any action against itself as a consequence of the other’s</span><span style="font-family:'Times New Roman'">&#xa0; </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">breach, the defaulting party agrees to be responsible for all costs and expenses incurred by </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">the other, including its legal and professional costs on a full indemnity basis.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.6. Regardless of any other provision of this Agreement, Eatables reserves the right to terminate </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">this Agreement forthwith or suspend the Service by notice to the </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> if:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">a. </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> consistently sends out wrong orders to Customers without a Customer consenting to an order switch; or</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">b. any fines or any other claims are brought against Eatables by any Customer or any other third party arising from any aspect of the Parties’ relationship (including in connection with any data breach, data compromise or theft of data held by </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'">, irrespective of whether such breach, compromise, or theft was within Customer’s control).</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">c. Any termination of the Agreement pursuant to Clause 13.6 shall be without prejudice to any other rights or remedies that Eatables may be entitled to under the Agreement or at law and shall not affect any accrued rights or liabilities of Eatables nor the coming into or continuance in force of any provision which is expressly or by implication intended to come into or continue in force on or after such Termination.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">13.7. Upon termination, all outstanding payments, commissions, and data obligations shall be </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">settled within 10 business days.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:18pt; margin-bottom:12pt; text-align:justify; page-break-after:avoid; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">14. Disclaimer/ Limitation of Liability</span></strong>
+			</p>
+			<ol class="awlist5" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-top:6pt; margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> shall be responsible for maintaining the confidentiality of its account and password and shall notify Eatables immediately in writing if the confidentiality of the password has or may have been compromised.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal"> Eatables shall not be liable for breach-of-contract damages suffered by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> that are remote or speculative, or that could not have reasonably been foreseen on execution of this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal">Eatables shall not be responsible for any injury, loss, liability, claim or damage of any kind suffered or incurred by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> which results from or relates to the Service, the Terms and Conditions, </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal">’s access to the Service Platform, utilization of the Service or reliance on any information contained on the Service Platform. However, this limitation of liability shall not apply to the extent that such damages are caused by Eatables' negligence, or willful misconduct.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal">Eatables will use commercially reasonable efforts to maintain the availability and uptime of the Platform and Service.</span><span style="font-weight:normal">&#xa0; </span><span style="font-weight:normal">However, Eatables does not warrant that the operation of the Service, Platform or any associated products will be uninterrupted nor error free, nor will it be 100% fail proof.</span>
+				</li>
+				<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:6pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal">Eatables will promptly notify </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> about any anticipated or ongoing service disruptions and estimated restoration timeframes.</span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">Without limiting Sub-Clause </span><span style="font-family:'Times New Roman'">&#x200e;</span><span style="font-family:'Times New Roman'">14.3 above, Eatables will not be responsible, and its liability is excluded for the following: </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol style="margin:0pt; padding-left:0pt; list-style-type:upper-latin">
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">All statements made by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> or users of </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal">’s account, including promos offered by the </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal">;</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">The unavailability or the consequences of the unavailability of the Service Platform or the Service for any reason; including but not limited to failure of, malfunction or defect of any nature in the Internet network. However, if such incident occurs, Eatables will use its best endeavours to ensure successfully resuming its performance of its obligations as soon as reasonably possible;</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">Any act or failure to act by any other third party involved in delivering the Service, including but not limited to the failure of the Rider to carry out the delivery of an order which has been placed by the Customer and packaged by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal">, except in the case where the negligent act of Eatables led to the failure;</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">Any circumstances for any indirect, contingent or consequential loss (including, but without being limited to, loss of revenue, loss of data, loss of business or loss of profits) sustained or incurred by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> </span><span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">howsoever arising to the extent permitted by law. </span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">14.6</span></strong><span style="font-family:'Times New Roman'">. Save for cases of fraud, negligence and misconduct, Eatables liability under this Agreement </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">will not exceed the fees paid under this Agreement during the twelve (12) month period </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">preceding the date of the claim.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong><strong><span style="font-family:'Times New Roman'; ">15.</span></strong><strong><span style="font-family:'Times New Roman'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong><strong><span style="font-family:'Times New Roman'; ">Indemnity</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">15.1</span></strong><span style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> at its own expenses, shall indemnify, defend and hold harmless the Eatables, its </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">affiliates and their respective employees, officers, directors, representatives and agents from </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">and against all losses, damages, liabilities, settlements, costs and expenses arising out of or </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">related to any claim, demand, suit, action or proceeding initiated by a third party arising out </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">of or relating to:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol style="margin:0pt; padding-left:0pt; list-style-type:upper-latin">
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">Any breach by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> of this Agreement;</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">A breach of any third-party intellectual property right;</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">Any Product, content or other materials or services provided by </span><span style="font-weight:normal; color:#ff0000">(Vendor Name)</span><span style="font-weight:normal"> under this Agreement; or</span>
+				</li>
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">An allegation that the service provided by</span><span style="font-weight:normal; color:#ff0000"> (Vendor Name) </span><span style="font-weight:normal">to the Customers violates the Applicable Law.</span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">15.2</span></strong><span style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span><span style="font-family:'Times New Roman'">is solely responsible for all acts or omissions that occur under its account or </span><br /><span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">password, including the content of any transmissions through the Service.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol start="16" style="margin:0pt; padding-left:0pt">
+				<li style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					Intellectual Property<span style="font-weight:normal"> </span>
+					<ol class="awlist6" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+						<li class="ListParagraph" style="margin-top:6pt; margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; line-height:normal; font-size:12pt">
+							<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><a id="_gjdgxs"></a><span style="font-weight:normal">All information, right, title and interest relating to copyright, trademark, patents and trade names, trade secrets and any other proprietary rights, whether registered or unregistered and however embodied, communication media, and systems associated with the Service and/or Eatables’ Website, Web Page, Mobile Application and the underlying services ("the </span>Intellectual Property<span style="font-weight:normal">") shall vest in Eatables and remain the sole property of Eatables. By use of the Service, </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">does not obtain any rights in the infrastructure, content or software associated with the services</span>
+						</li>
+						<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; line-height:normal; font-size:12pt">
+							<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><a id="_30j0zll"></a><span style="font-weight:normal">The Parties agree not to use, challenge, or exploit the Intellectual Property rights of the other in any way unless the Party has been given prior written consent by the other Party.</span>
+						</li>
+						<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:0pt; text-indent:-18pt; line-height:normal; font-size:12pt">
+							<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-weight:normal">The Service or the use of it may include material or content which is owned by third parties, and/or the rights in which vest in third parties.</span><span style="font-weight:normal">&#xa0; </span><span style="font-weight:normal; color:#ff0000">(Vendor Name) </span><span style="font-weight:normal">may not use, copy, exploit or publish any aspect of the Service or use of the Service, without the prior written consent of the owner of the rights therein.</span>
+						</li>
+						<li class="ListParagraph" style="margin-left:22.5pt; margin-bottom:6pt; text-indent:-18pt; line-height:normal; font-size:12pt">
+							<span style="width:13.5pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><a id="_1fob9te"></a><span style="font-weight:normal">Each Party shall promptly inform the other of any claims in respect of patent rights, copyrights, registered designs or other Intellectual Property rights and shall make no settlement thereof without giving to the other prior notice of the claim and a reasonable opportunity to deal with the same.</span>
+						</li>
+					</ol>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">17. GOVERNING LAW AND DISPUTE RESOLUTION</span></strong>
+			</p>
+			<ol class="awlist7" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-top:6pt; margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">This Agreement shall be governed by and construed in accordance with the laws of Nigeria.</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">All disputes arising from the operation of this Agreement shall be settled amicably by both Parties through mutual discussion. If the Parties are unable to resolve the dispute through mutual discussion within fourteen (14) days after either Party notifies the other in writing that there is a dispute, the dispute shall be referred to Mediation at the Lagos State Multi-Door Courthouse (“LMDC”), which shall be conducted in accordance with the LMDC Mediation Rules (which rules are deemed to be incorporated by reference into this clause). </span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">. The Mediation shall be held in Lagos State, Nigeria and conducted in the English language.</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">Where Mediation fails, Parties may further resort to Arbitration. The decision/award of the LMDC shall be final and binding on the Parties. The cost of arbitration shall be borne equally by the parties unless awarded by the LMDC..</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:6pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">This clause shall survive the termination of this Agreement and shall accordingly apply at all times to all dispute concerning this Agreement or any matter hereunder.</span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">18. FORCE MAJEURE</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">Neither Party shall be liable for non-performance due to causes beyond their reasonable control, including natural disasters, government actions, or transport disruptions, provided that prompt notice is given to the other Party.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">19</span></strong><span style="font-family:'Times New Roman'">. </span><strong><span style="font-family:'Times New Roman'; ">Notices and Grievance</span></strong>
+			</p>
+			<p style="margin-top:6pt; margin-bottom:6pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">Any notice required by this Agreement or given in connection with it, shall be in writing and shall be given to the appropriate Party by personal delivery or via email.</span><span style="font-family:'Times New Roman'">&#xa0; </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">Eatables</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">email:</span></strong><span style="font-family:'Times New Roman'"> support@quickeatables.com</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">mobile</span></strong><span style="font-family:'Times New Roman'">: +234 9125151780</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">address</span></strong><span style="font-family:'Times New Roman'">: 52 Saka Tinubu, Victoria Island, Lagos State.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; color:#ff0000">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span></strong><strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name) </span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">email:</span></strong><span style="font-family:'Times New Roman'">&#xa0; </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Email)</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">mobile</span></strong><span style="font-family:'Times New Roman'; color:#ff0000"> (Vendor Phone Number)</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="width:42pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><strong><span style="font-family:'Times New Roman'; ">address: </span></strong><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Address)</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<ol start="20" style="margin:0pt; padding-left:0pt">
+				<li style="margin-bottom:10pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					Representations and Warranties
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Eatables warrants and represents that:</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.1 it has full capacity and authority as well as all the necessary licenses, permits and consent to enter into and perform in terms of this Agreement;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.2. it is able to provide the Service herein referred, and its Service shall be carried out to best industry standards; and shall be carried out by competent and diligent personnel;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.3. it is not aware of any matter within their reasonable control or subject to any contractual obligation that is likely to have an adverse effect on their ability to perform their obligation under this Agreement;</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.4. Eatables neither warrants that the operation of the Service, Platform or any associated products will be uninterrupted nor error free, nor will it be 100% fraud or fail proof. However, Eatables warrants that it shall use its best endeavours to ensure that the Service and Platform always operates optimally in accordance with best industry standards during the term of this Agreement.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.5. Eatables will provide prior written notice of any material changes to the Services.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">20.6. the Service carried out hereunder shall be performed in compliance with the applicable laws of the Federal Republic of Nigeria.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">21. Miscellaneous</span></strong><span style="font-family:'Times New Roman'"> </span>
+			</p>
+			<ol class="awlist8" style="margin:0pt; padding-left:0pt">
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<a id="_3znysh7"></a><span style="font-weight:normal">. An amendment of this Agreement shall be subject to the mutual agreement by both Parties prior to effecting same in the Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">No delay, neglect or forbearance on the part of either Party in enforcing against the other Party any term or condition of this Agreement shall either be, or be deemed to be, a waiver or in any way prejudice any right of that party under this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">The Parties acknowledge that this Agreement and its performance does not create a partnership or joint venture between the Parties.</span><span style="font-weight:normal">&#xa0; </span><span style="font-weight:normal">The Parties agree that, for purposes of this Agreement, each Party shall be solely responsible for its own acts and omissions.</span><span style="font-weight:normal">&#xa0; </span><span style="font-weight:normal">Neither of the Parties shall be responsible for any loss or damage caused by the act or omission of the other Party or by virtue of this Agreement except as provided for in this Agreement.</span>
+				</li>
+				<li class="ListParagraph" style="margin-bottom:10pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
+					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">The performance of this Agreement is the duty of each Party.</span>
+				</li>
+			</ol>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:'Times New Roman'; ">21.5.</span></strong><span style="font-family:'Times New Roman'"> </span><span style="font-family:'Times New Roman'; color:#ff0000">(Vendor Name)</span><span style="font-family:'Times New Roman'"> shall not assign its performance of this Agreement to a third party.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">22. ENTIRE AGREEMENT</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<span style="font-family:'Times New Roman'">This Agreement constitutes the entire understanding between the Parties and supersedes all prior communications, agreements, or understandings regarding the subject matter herein.</span>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:115%; font-size:12pt">
+				<strong><span style="font-family:'Times New Roman'; ">&#xa0;</span></strong>
+			</p>
+			<p style="margin-bottom:10pt; text-align:justify; line-height:normal; font-size:12pt">
+				<span style="font-family:'Times New Roman'">&#xa0;</span>
+			</p>
+			<div style="clear:both">
+				<p style="margin-bottom:6pt; line-height:6%; font-size:10pt">
+					<span style="height:0pt; display:block; position:absolute; z-index:-65536"><img src="https://myfiles.space/user_files/temporary/690aaee76c0f73.60986129/1762307813_service-level-agreement-pharmacy-general/1762307813_service-level-agreement-pharmacy-general-1.png" width="15" height="15" alt="" style="margin-top:762.3pt; margin-left:162.85pt; position:absolute" /></span>&#xa0;
+				</p>
+			</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	</Layout>
+
+	<style>
+	.main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: clamp(16px, 3vw, 24px);
+		background-color: white;
+		font-family: "Inter", sans-serif;
+		line-height: 1.6;
+		color: #333;
+	}
+
+	.green {
+		display: none;
+	}
+
+	.cookie_main {
+		margin-bottom: 24px;
+	}
+
+	.loadingContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 40px;
+		text-align: center;
+	}
+
+	.spinner {
+		width: 40px;
+		height: 40px;
+		border: 4px solid #f3f3f3;
+		border-top: 4px solid #3498db;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+		margin-bottom: 20px;
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+
+	.vendor-agreement-content,
+	.pharmacy-agreement-content {
+		font-family: Garamond, serif;
+		line-height: 1.7;
+		font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+	}
+
+	.vendor-agreement-content p,
+	.vendor-agreement-content li,
+	.pharmacy-agreement-content p,
+	.pharmacy-agreement-content li {
+		margin: 0 0 0.75rem !important;
+		line-height: 1.7 !important;
+		font-size: inherit !important;
+	}
+
+	.vendor-agreement-content ol,
+	.vendor-agreement-content ul,
+	.pharmacy-agreement-content ol,
+	.pharmacy-agreement-content ul {
+		margin: 0 0 0.75rem !important;
+		padding-left: 1.25rem !important;
+	}
+
+	.vendor-agreement-content li,
+	.pharmacy-agreement-content li {
+		padding-left: 0 !important;
+	}
+
+	.vendor-agreement-content h1,
+	.vendor-agreement-content h2,
+	.vendor-agreement-content h3,
+	.vendor-agreement-content h4,
+	.vendor-agreement-content h5,
+	.vendor-agreement-content h6,
+	.pharmacy-agreement-content h1,
+	.pharmacy-agreement-content h2,
+	.pharmacy-agreement-content h3,
+	.pharmacy-agreement-content h4,
+	.pharmacy-agreement-content h5,
+	.pharmacy-agreement-content h6 {
+		margin: 1.25rem 0 0.5rem !important;
+		line-height: 1.35 !important;
+		color: #222 !important;
+	}
+
+	.vendor-agreement-content h1,
+	.pharmacy-agreement-content h1 {
+		font-size: clamp(1.1rem, 1rem + 0.3vw, 1.35rem) !important;
+		font-weight: 600 !important;
+	}
+
+	.vendor-agreement-content h2,
+	.pharmacy-agreement-content h2 {
+		font-size: clamp(1.05rem, 0.95rem + 0.25vw, 1.25rem) !important;
+		font-weight: 600 !important;
+	}
+
+	.vendor-agreement-content h3,
+	.vendor-agreement-content h4,
+	.vendor-agreement-content h5,
+	.vendor-agreement-content h6,
+	.pharmacy-agreement-content h3,
+	.pharmacy-agreement-content h4,
+	.pharmacy-agreement-content h5,
+	.pharmacy-agreement-content h6 {
+		font-size: clamp(1rem, 0.95rem + 0.15vw, 1.15rem) !important;
+		font-weight: 600 !important;
+	}
+
+	.Heading7 {
+		font-size: 18px;
+		font-weight: bold;
+		margin: 20px 0;
+	}
+
+	/* Preserve legacy document formatting */
+	.pharmacy-agreement-content h1,
+	.pharmacy-agreement-content h2,
+	.pharmacy-agreement-content h3,
+	.pharmacy-agreement-content h4,
+	.pharmacy-agreement-content h5,
+	.pharmacy-agreement-content h6,
+	.pharmacy-agreement-content p {
+		margin: 0 0 8pt;
+	}
+
+	.pharmacy-agreement-content li,
+	.pharmacy-agreement-content table {
+		margin-top: 0;
+		margin-bottom: 8pt;
+	}
+
+	.pharmacy-agreement-content h1 {
+		margin-top: 24pt;
+		margin-bottom: 6pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 24pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content h2 {
+		margin-top: 18pt;
+		margin-bottom: 4pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 18pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content h3 {
+		margin-top: 14pt;
+		margin-bottom: 4pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 14pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content h4 {
+		margin-top: 12pt;
+		margin-bottom: 2pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 12pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content h5 {
+		margin-top: 11pt;
+		margin-bottom: 2pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 11pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content h6 {
+		margin-top: 10pt;
+		margin-bottom: 2pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 10pt;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.pharmacy-agreement-content .BodyText {
+		margin-bottom: 6pt;
+		line-height: 1.08;
+		font-size: 11pt;
+	}
+
+	.pharmacy-agreement-content .ListParagraph {
+		margin-left: 36pt;
+		margin-bottom: 8pt;
+		line-height: 1.08;
+		font-size: 11pt;
+	}
+
+	.pharmacy-agreement-content .Subtitle {
+		margin-top: 18pt;
+		margin-bottom: 4pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-family: Georgia, serif;
+		font-size: 24pt;
+		font-style: italic;
+		color: #666;
+	}
+
+	.pharmacy-agreement-content .Title {
+		margin-top: 24pt;
+		margin-bottom: 6pt;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		line-height: 1.08;
+		font-size: 36pt;
+		font-weight: bold;
+	}
+
+	.vendor-agreement-content table,
+	.pharmacy-agreement-content table {
+		width: 100% !important;
+		font-size: inherit !important;
+	}
+
+	.vendor-agreement-content td,
+	.vendor-agreement-content th,
+	.pharmacy-agreement-content td,
+	.pharmacy-agreement-content th {
+		padding: 0.5rem !important;
+		line-height: 1.4 !important;
+	}
+
+	.pharmacy-agreement-content .awlist1,
+	.pharmacy-agreement-content .awlist2,
+	.pharmacy-agreement-content .awlist3,
+	.pharmacy-agreement-content .awlist4,
+	.pharmacy-agreement-content .awlist5,
+	.pharmacy-agreement-content .awlist6,
+	.pharmacy-agreement-content .awlist7,
+	.pharmacy-agreement-content .awlist8 {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.pharmacy-agreement-content .awlist1 { counter-reset: awlistcounter6_0 4; }
+	.pharmacy-agreement-content .awlist1 > li:before { content: '5.1'; counter-increment: awlistcounter6_0; }
+
+	.pharmacy-agreement-content .awlist2 { counter-reset: awlistcounter17_0; }
+	.pharmacy-agreement-content .awlist2 > li:before { content: '7.' counter(awlistcounter17_0) '.'; counter-increment: awlistcounter17_0; }
+
+	.pharmacy-agreement-content .awlist3 { counter-reset: awlistcounter18_0; }
+	.pharmacy-agreement-content .awlist3 > li:before { content: '8.' counter(awlistcounter18_0) '.'; counter-increment: awlistcounter18_0; }
+
+	.pharmacy-agreement-content .awlist4 { counter-reset: awlistcounter19_0; }
+	.pharmacy-agreement-content .awlist4 > li:before { content: '11.' counter(awlistcounter19_0) '.'; counter-increment: awlistcounter19_0; }
+
+	.pharmacy-agreement-content .awlist5 { counter-reset: awlistcounter20_0; }
+	.pharmacy-agreement-content .awlist5 > li:before { content: '14.' counter(awlistcounter20_0) '.'; counter-increment: awlistcounter20_0; }
+
+	.pharmacy-agreement-content .awlist6 { counter-reset: awlistcounter22_1; }
+	.pharmacy-agreement-content .awlist6 > li:before { content: '16.' counter(awlistcounter22_1) '.'; counter-increment: awlistcounter22_1; }
+
+	.pharmacy-agreement-content .awlist7 { counter-reset: awlistcounter23_0; }
+	.pharmacy-agreement-content .awlist7 > li:before { content: '17.' counter(awlistcounter23_0) '.'; counter-increment: awlistcounter23_0; }
+
+	.pharmacy-agreement-content .awlist8 { counter-reset: awlistcounter24_0; }
+	.pharmacy-agreement-content .awlist8 > li:before { content: '21.' counter(awlistcounter24_0) '.'; counter-increment: awlistcounter24_0; }
+
+	@media (max-width: 900px) {
+		.pharmacy-agreement-content img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.pharmacy-agreement-content .table-container {
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.pharmacy-agreement-content table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.pharmacy-agreement-content td,
+		.pharmacy-agreement-content th {
+			padding: 8px;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.main {
+			padding: 10px;
+			max-width: 100%;
+		}
+
+		.vendor-agreement-content,
+		.pharmacy-agreement-content {
+			font-size: 0.95rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.main {
+			padding: 5px;
+		}
+
+		.vendor-agreement-content,
+		.pharmacy-agreement-content {
+			font-size: 0.9rem;
+		}
+	}
+	</style>
+
+	<script>
+	interface VendorData {
+  effectiveDate?: string;
+  vendorId?: string;
+  day?: number;
+  month?: number;
+  year?: number;
+  vendorName?: string;
+  vendorAddress?: string;
+  vendorEmail?: string;
+  vendorPhone?: string;
+  status?: string;
+  retrievedAt?: string;
+	categoryName?: string;
+}
+
+	document.addEventListener('DOMContentLoaded', async () => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const vendorId = urlParams.get('vendorId');
+
+		if (vendorId) {
+			await fetchVendorData(vendorId);
+		}
+	});
+
+	async function fetchVendorData(vendorId: string): Promise<void> {
+		const loadingContainer = document.getElementById('loading-container');
+
+		try {
+			if (loadingContainer) {
+				loadingContainer.style.display = 'flex';
+			}
+
+			const response = await fetch(`/api/vendor-info/${vendorId}`);
+			const result = await response.json();
+
+			if (result.success && result.data) {
+				updateVendorInformation(result.data);
+			} else {
+				console.error('Failed to fetch vendor data:', result.error);
+			}
+		} catch (error) {
+			console.error('Error fetching vendor data:', error);
+		} finally {
+			if (loadingContainer) {
+				loadingContainer.style.display = 'none';
+			}
+		}
+	}
+
+	function updateVendorInformation(vendorData: VendorData): void {
+		if (handleCategoryRouting(vendorData)) {
+			return;
+		}
+
+		const dayElements = document.querySelectorAll('.vendor-day');
+		const monthElements = document.querySelectorAll('.vendor-month');
+		const yearElements = document.querySelectorAll('.vendor-year');
+		const nameElements = document.querySelectorAll('.vendor-name');
+		const addressElements = document.querySelectorAll('.vendor-address');
+		const emailElements = document.querySelectorAll('.vendor-email');
+		const phoneElements = document.querySelectorAll('.vendor-phone');
+
+		 if (vendorData.effectiveDate) {
+    // Parse the effective date if it exists
+    const date = new Date(vendorData.effectiveDate);
+    
+    // Update ALL day elements
+    dayElements.forEach(element => {
+      element.textContent = `${date.getDate()}`;
+    });
+    
+    // Update ALL month elements
+    monthElements.forEach(element => {
+      element.textContent = `${date.toLocaleString('default', { month: 'long' })}`;
+    });
+    
+    // Update ALL year elements
+    yearElements.forEach(element => {
+      element.textContent = `${date.getFullYear()}`;
+    });
+  }
+  
+  // Update ALL vendor name elements
+  if (vendorData.vendorName) {
+    nameElements.forEach(element => {
+      element.textContent = `${vendorData.vendorName}`;
+    });
+  }
+
+  // Update ALL vendor address elements
+  if (vendorData.vendorAddress) {
+    addressElements.forEach(element => {
+      element.textContent = `${vendorData.vendorAddress}`;
+    });
+  }
+
+  // Update ALL vendor email elements
+  if (vendorData.vendorEmail) {
+    emailElements.forEach(element => {
+      element.textContent = `${vendorData.vendorEmail}`;
+    });
+  }
+
+  // Update ALL vendor phone elements
+  if (vendorData.vendorPhone) {
+    phoneElements.forEach(element => {
+      element.textContent = `${vendorData.vendorPhone}`;
+    });
+  }
+	}
+
+	function replacePlaceholderText(placeholder: string, value?: string): void {
+		if (!value) {
+			return;
+		}
+
+		const container = document.querySelector('.pharmacy-agreement-content');
+		if (!container) {
+			return;
+		}
+
+		const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+		const nodesToUpdate: Text[] = [];
+
+		while (walker.nextNode()) {
+			const node = walker.currentNode as Text;
+			if (node.nodeValue && node.nodeValue.includes(placeholder)) {
+				nodesToUpdate.push(node);
+			}
+		}
+
+		nodesToUpdate.forEach((node) => {
+			node.nodeValue = node.nodeValue?.replaceAll(placeholder, value) ?? node.nodeValue;
+		});
+	}
+
+
+	function handleCategoryRouting(vendorData: VendorData): boolean {
+		const categories = extractCategories(vendorData);
+		const isPharmacy = categories.some((category) => category.includes('pharmacy'));
+		const isOnPharmacyPage = window.location.pathname.includes('/pharmacy-agreement-mobile');
+
+		if (isPharmacy && !isOnPharmacyPage) {
+			window.location.href = `/pharmacy-agreement-mobile${window.location.search}`;
+			return true;
+		}
+
+		if (!isPharmacy && isOnPharmacyPage) {
+			window.location.href = `/vendor-agreement-mobile${window.location.search}`;
+			return true;
+		}
+
+		return false;
+	}
+
+
+function extractCategories(vendorData: VendorData): string[] {
+	const collected: Array<string | undefined | null | string[]> = [
+		vendorData.categoryName,
+	];
+
+	const flattened = collected.flatMap((entry) => {
+		if (!entry) {
+			return [];
+		}
+
+		if (Array.isArray(entry)) {
+			return entry;
+		}
+
+		return `${entry}`.split(/[;,]/);
+	});
+
+	return flattened
+		.map((value) => value.trim().toLowerCase())
+		.filter((value) => value.length > 0);
+}
+	</script>

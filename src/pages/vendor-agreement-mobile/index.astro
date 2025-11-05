@@ -746,7 +746,7 @@ const vendorId = Astro.url.searchParams.get('vendorId');
 .main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+	padding: clamp(16px, 3vw, 24px);
   background-color: white;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
@@ -758,7 +758,7 @@ const vendorId = Astro.url.searchParams.get('vendorId');
 }
 
 .cookie_main {
-  margin-bottom: 40px;
+	margin-bottom: 24px;
 }
 
 .loadingContainer {
@@ -786,20 +786,81 @@ const vendorId = Astro.url.searchParams.get('vendorId');
 }
 
 .vendor-agreement-content {
-  font-family: Garamond, serif;
-  line-height: 1.8;
+.vendor-agreement-content {
+	font-family: Garamond, serif;
+	line-height: 1.7;
+	font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+}
+
+.vendor-agreement-content p,
+.vendor-agreement-content li {
+	margin: 0 0 0.75rem !important;
+	line-height: 1.7 !important;
+	font-size: inherit !important;
+}
+
+.vendor-agreement-content ol,
+.vendor-agreement-content ul {
+	margin: 0 0 0.75rem !important;
+	padding-left: 1.25rem !important;
+}
+
+.vendor-agreement-content li {
+	padding-left: 0 !important;
+}
+
+.vendor-agreement-content h1,
+.vendor-agreement-content h2,
+.vendor-agreement-content h3,
+.vendor-agreement-content h4,
+.vendor-agreement-content h5,
+.vendor-agreement-content h6 {
+	margin: 1.25rem 0 0.5rem !important;
+	line-height: 1.35 !important;
+	color: #222 !important;
+}
+
+.vendor-agreement-content h1 {
+	font-size: clamp(1.1rem, 1rem + 0.3vw, 1.35rem) !important;
+	font-weight: 600 !important;
+}
+
+.vendor-agreement-content h2 {
+	font-size: clamp(1.05rem, 0.95rem + 0.25vw, 1.25rem) !important;
+	font-weight: 600 !important;
+}
+
+.vendor-agreement-content h3,
+.vendor-agreement-content h4,
+.vendor-agreement-content h5,
+.vendor-agreement-content h6 {
+	font-size: clamp(1rem, 0.95rem + 0.15vw, 1.15rem) !important;
+	font-weight: 600 !important;
+}
+
+.vendor-agreement-content table {
+	width: 100% !important;
+	font-size: inherit !important;
+}
+
+.vendor-agreement-content td,
+.vendor-agreement-content th {
+	padding: 0.5rem !important;
+	line-height: 1.4 !important;
 }
 
 .agreement-sections h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #333;
+.agreement-sections h2 {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	color: #333;
 }
 
 .Heading7 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 20px 0;
+.Heading7 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 1rem 0;
 }
 
 /* Responsive styles */
@@ -809,9 +870,9 @@ const vendorId = Astro.url.searchParams.get('vendorId');
     max-width: 100%;
   }
   
-  .vendor-agreement-content {
-    font-size: 14px;
-  }
+	.vendor-agreement-content {
+		font-size: 0.95rem;
+	}
   
   .agreement-sections h2 {
     font-size: 16px;
@@ -823,9 +884,9 @@ const vendorId = Astro.url.searchParams.get('vendorId');
     padding: 5px;
   }
   
-  .vendor-agreement-content {
-    font-size: 12px;
-  }
+	.vendor-agreement-content {
+		font-size: 0.9rem;
+	}
 }
 </style>
 
@@ -843,6 +904,7 @@ interface VendorData {
   vendorPhone?: string;
   status?: string;
   retrievedAt?: string;
+	categoryName?: string;
 }
 
 
@@ -883,6 +945,10 @@ async function fetchVendorData(vendorId: string): Promise<void> {
 }
 
 function updateVendorInformation(vendorData: VendorData): void {
+	if (handleCategoryRouting(vendorData)) {
+		return;
+	}
+
   // Update day, month, year - select ALL instances
   const dayElements = document.querySelectorAll('.vendor-day');
   const monthElements = document.querySelectorAll('.vendor-month');
@@ -939,5 +1005,45 @@ function updateVendorInformation(vendorData: VendorData): void {
       element.textContent = `${vendorData.vendorPhone}`;
     });
   }
+}
+
+function handleCategoryRouting(vendorData: VendorData): boolean {
+	const categories = extractCategories(vendorData);
+	const isPharmacy = categories.some((category) => category.includes('pharmacy'));
+	const isOnPharmacyPage = window.location.pathname.includes('/pharmacy-agreement-mobile');
+
+	if (isPharmacy && !isOnPharmacyPage) {
+		window.location.href = `/pharmacy-agreement-mobile${window.location.search}`;
+		return true;
+	}
+
+	if (!isPharmacy && isOnPharmacyPage) {
+		window.location.href = `/vendor-agreement-mobile${window.location.search}`;
+		return true;
+	}
+
+	return false;
+}
+
+function extractCategories(vendorData: VendorData): string[] {
+	const collected: Array<string | undefined | null | string[]> = [
+		vendorData.categoryName,
+	];
+
+	const flattened = collected.flatMap((entry) => {
+		if (!entry) {
+			return [];
+		}
+
+		if (Array.isArray(entry)) {
+			return entry;
+		}
+
+		return `${entry}`.split(/[;,]/);
+	});
+
+	return flattened
+		.map((value) => value.trim().toLowerCase())
+		.filter((value) => value.length > 0);
 }
 </script>
