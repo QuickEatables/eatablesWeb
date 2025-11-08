@@ -669,6 +669,8 @@ const riderId = Astro.url.searchParams.get('riderId');
 		riderEmail?: string;
 		riderPhone?: string;
 		status?: string;
+        state?: string;
+        stateFirstLetter?: string;
 		retrievedAt?: string;
 	}
 
@@ -730,6 +732,9 @@ const riderId = Astro.url.searchParams.get('riderId');
 
 		replacePlaceholder('(YEAR)', yearString);
 		replacePlaceholder('(Year)', yearString);
+
+        replacePlaceholder('(State)', riderData.state);
+        replacePlaceholder('(State first letter)', riderData.stateFirstLetter);
 	}
 
 	function deriveDateParts(riderData: RiderData): {

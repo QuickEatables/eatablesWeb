@@ -687,13 +687,13 @@ const vendorId = Astro.url.searchParams.get('vendorId');
 					<span style="font-weight:normal">This Agreement shall be governed by and construed in accordance with the laws of Nigeria.</span>
 				</li>
 				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
-					<span style="font-weight:normal">All disputes arising from the operation of this Agreement shall be settled amicably by both Parties through mutual discussion. If the Parties are unable to resolve the dispute through mutual discussion within fourteen (14) days after either Party notifies the other in writing that there is a dispute, the dispute shall be referred to Mediation at the Lagos State Multi-Door Courthouse (“LMDC”), which shall be conducted in accordance with the LMDC Mediation Rules (which rules are deemed to be incorporated by reference into this clause). </span>
+					<span style="font-weight:normal">All disputes arising from the operation of this Agreement shall be settled amicably by both Parties through mutual discussion. If the Parties are unable to resolve the dispute through mutual discussion within fourteen (14) days after either Party notifies the other in writing that there is a dispute, the dispute shall be referred to Mediation at the (State) State Multi-Door Courthouse (“(State first Letter)MDC”), which shall be conducted in accordance with the (State first Letter)MDC Mediation Rules (which rules are deemed to be incorporated by reference into this clause). </span>
 				</li>
 				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
 					<span style="font-weight:normal">. The Mediation shall be held in Lagos State, Nigeria and conducted in the English language.</span>
 				</li>
 				<li class="ListParagraph" style="margin-bottom:0pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
-					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">Where Mediation fails, Parties may further resort to Arbitration. The decision/award of the LMDC shall be final and binding on the Parties. The cost of arbitration shall be borne equally by the parties unless awarded by the LMDC..</span>
+					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">Where Mediation fails, Parties may further resort to Arbitration. The decision/award of the (State first letter)MDC shall be final and binding on the Parties. The cost of arbitration shall be borne equally by the parties unless awarded by the (State first letter)MDC..</span>
 				</li>
 				<li class="ListParagraph" style="margin-bottom:6pt; text-indent:-18pt; text-align:justify; line-height:normal; font-family:'Times New Roman'; font-size:12pt; font-weight:bold; list-style-position:inside">
 					<span style="font-weight:normal">&#xa0;</span><span style="font-weight:normal">This clause shall survive the termination of this Agreement and shall accordingly apply at all times to all dispute concerning this Agreement or any matter hereunder.</span>
@@ -1181,6 +1181,8 @@ const vendorId = Astro.url.searchParams.get('vendorId');
   status?: string;
   retrievedAt?: string;
 	categoryName?: string;
+		state?: string;
+		stateFirstLetter?: string;
 }
 
 	document.addEventListener('DOMContentLoaded', async () => {
@@ -1277,30 +1279,37 @@ const vendorId = Astro.url.searchParams.get('vendorId');
       element.textContent = `${vendorData.vendorPhone}`;
     });
   }
+
+	const stateValue = vendorData.state?.trim();
+	const stateFirstLetter = vendorData.stateFirstLetter?.trim() || (stateValue ? stateValue.charAt(0).toUpperCase() : undefined);
+
+	replacePlaceholder('(State)', stateValue);
+	replacePlaceholder('(State first letter)', stateFirstLetter);
 	}
 
-	function replacePlaceholderText(placeholder: string, value?: string): void {
-		if (!value) {
+	function replacePlaceholder(placeholder: string, value?: string, containerSelector = '.pharmacy-agreement-content'): void {
+		const normalized = value?.trim();
+		if (!normalized) {
 			return;
 		}
 
-		const container = document.querySelector('.pharmacy-agreement-content');
+		const container = document.querySelector(containerSelector);
 		if (!container) {
 			return;
 		}
 
 		const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
-		const nodesToUpdate: Text[] = [];
+		const nodes: Text[] = [];
 
 		while (walker.nextNode()) {
 			const node = walker.currentNode as Text;
-			if (node.nodeValue && node.nodeValue.includes(placeholder)) {
-				nodesToUpdate.push(node);
+			if (node.nodeValue?.includes(placeholder)) {
+				nodes.push(node);
 			}
 		}
 
-		nodesToUpdate.forEach((node) => {
-			node.nodeValue = node.nodeValue?.replaceAll(placeholder, value) ?? node.nodeValue;
+		nodes.forEach((node) => {
+			node.nodeValue = node.nodeValue?.replaceAll(placeholder, normalized) ?? node.nodeValue;
 		});
 	}
 

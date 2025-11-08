@@ -481,13 +481,13 @@ const vendorId = Astro.url.searchParams.get('vendorId');
 							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>This Agreement shall be governed by and construed in accordance with the laws of Nigeria.
 						</li>
 						<li style="margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:0pt; font-weight:normal">
-							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>All disputes arising from the operation of this Agreement shall be settled amicably by both Parties through mutual discussion. If the Parties are unable to resolve the dispute through mutual discussion within fourteen (14) days after either Party notifies the other in writing that there is a dispute, the dispute shall be referred to arbitration at the Lagos State Multi-Door Courthouse (“LMDC”), which shall be conducted in accordance with the LMDC arbitration Rules (which rules are deemed to be incorporated by reference into this clause). 
+							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>All disputes arising from the operation of this Agreement shall be settled amicably by both Parties through mutual discussion. If the Parties are unable to resolve the dispute through mutual discussion within fourteen (14) days after either Party notifies the other in writing that there is a dispute, the dispute shall be referred to arbitration at the (State) State Multi-Door Courthouse (“(State first letter)MDC”), which shall be conducted in accordance with the (State first letter)MDC arbitration Rules (which rules are deemed to be incorporated by reference into this clause). 
 						</li>
 						<li style="margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:0pt; font-weight:normal">
 							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>The arbitration shall be held in Lagos State, Nigeria and conducted in the English language.
 						</li>
 						<li style="margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:0pt; font-weight:normal">
-							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>The decision/award of the LMDC shall be final and binding on the Parties. The cost of arbitration shall be borne equally by the parties unless awarded by the LMDC..
+							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>The decision/award of the (State first letter)MDC shall be final and binding on the Parties. The cost of arbitration shall be borne equally by the parties unless awarded by the (State first letter)MDC..
 						</li>
 						<li style="margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:0pt; font-weight:normal">
 							<span style="width:13.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>This clause shall survive the termination of this Agreement and shall accordingly apply at all times to all dispute concerning this Agreement or any matter hereunder.
@@ -789,6 +789,8 @@ interface VendorData {
   status?: string;
   retrievedAt?: string;
 	categoryName?: string;
+	state?: string;
+	stateFirstLetter?: string;
 }
 
 
@@ -889,6 +891,38 @@ function updateVendorInformation(vendorData: VendorData): void {
       element.textContent = `${vendorData.vendorPhone}`;
     });
   }
+
+	const stateValue = vendorData.state?.trim();
+	const stateFirstLetter = vendorData.stateFirstLetter?.trim() || (stateValue ? stateValue.charAt(0).toUpperCase() : undefined);
+
+	replacePlaceholder('(State)', stateValue);
+	replacePlaceholder('(State first letter)', stateFirstLetter);
+}
+
+function replacePlaceholder(placeholder: string, value?: string, containerSelector = '.vendor-agreement-content'): void {
+	const normalized = value?.trim();
+	if (!normalized) {
+		return;
+	}
+
+	const container = document.querySelector(containerSelector);
+	if (!container) {
+		return;
+	}
+
+	const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+	const nodes: Text[] = [];
+
+	while (walker.nextNode()) {
+		const node = walker.currentNode as Text;
+		if (node.nodeValue?.includes(placeholder)) {
+			nodes.push(node);
+		}
+	}
+
+	nodes.forEach((node) => {
+		node.nodeValue = node.nodeValue?.replaceAll(placeholder, normalized) ?? node.nodeValue;
+	});
 }
 
 function handleCategoryRouting(vendorData: VendorData): boolean {
